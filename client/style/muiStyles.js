@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/styles'
 import { createMuiTheme } from '@material-ui/core/styles'
-import { useMediaQuery } from '@material-ui/core'
 
+const image = 'client/images/background.jpg'
 
 export const theme = createMuiTheme({
     palette: {
@@ -48,5 +48,20 @@ export const NavStyles = makeStyles(theme => ({
     },
     menuItem: {
         fontFamily: 'Montserrat, sans-serif'
+    }
+}))
+
+export const HomeStyles = makeStyles(theme => ({
+    root: {
+        display: 'flex',
+        background: 'url(server/images/background.jpg)'
+    },
+    // backgroundImage: {
+    //     height: '100%',
+    //     width: '100%',
+    //     backgroundImage: `'url("${image}")'`
+    // },
+    textBox: {
+        flexGrow: 1
     }
 }))
