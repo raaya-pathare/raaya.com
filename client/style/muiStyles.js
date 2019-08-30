@@ -27,7 +27,8 @@ export const NavStyles = makeStyles(theme => ({
         // backgroundColor: theme.palette.background.main
     },
     name: {
-        color: 'black'
+        color: 'black',
+        fontFamily: 'Montserrat, sans-serif'
     },
     icon: {
         color: 'blue'
@@ -43,6 +44,9 @@ export const NavStyles = makeStyles(theme => ({
         '& .MuiMenuItem-root': {
             fontSize: '1rem',
             marginTop: '-5px',
-        }
+        },
+    },
+    menuItem: {
+        fontFamily: 'Montserrat, sans-serif'
     }
 }))
