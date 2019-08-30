@@ -1,8 +1,6 @@
 import { makeStyles } from '@material-ui/styles'
 import { createMuiTheme } from '@material-ui/core/styles'
 
-const image = 'client/images/background.jpg'
-
 export const theme = createMuiTheme({
     palette: {
         primary: {
