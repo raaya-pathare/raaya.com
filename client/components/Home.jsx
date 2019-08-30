@@ -8,7 +8,6 @@ const Home = (props) => {
     return (
         <>
             <Container className={classes.root}>
-                {/* <Paper className={classes.backgroundImage}> */}
                 <Container className={classes.textBox}>
                     <Typography>
                         Hello, I'm Raaya. 
@@ -17,7 +16,6 @@ const Home = (props) => {
                         I am a Full Stack Web Developer. 
                     </Typography>
                 </Container>
-                {/* </Paper> */}
             </Container>
         </>
     )
