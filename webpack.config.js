@@ -11,8 +11,14 @@ module.exports = {
     rules: [{
       test: /\.jsx?$/,
       loader: 'babel-loader',
-      exclude: /node_modules/
-    }]
+      exclude: /node_modules/,
+    },
+    {
+      test: /\.(png|svg|jpg|gif)$/,
+      use: [
+      'file-loader'
+      ]
+  }]
   },
   resolve: {
     extensions: ['.js', '.jsx']
