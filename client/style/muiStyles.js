@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/styles'
 import { createMuiTheme } from '@material-ui/core/styles'
+import image from '../images/background.jpg'
 
 export const theme = createMuiTheme({
     palette: {
@@ -20,16 +21,19 @@ export const theme = createMuiTheme({
 export const NavStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
+        width: '100vw',
         justifyContent: 'space-between',
         marginTop: '25px',
-        // backgroundColor: theme.palette.background.main
+        backgroundColor: '#fef8f8',
+        position: 'fixed'
     },
     name: {
         color: 'black',
-        fontFamily: 'Montserrat, sans-serif'
+        fontFamily: 'Sorts Mill Goudy, serif',
+        fontSize: '18px'
     },
     icon: {
-        color: 'blue'
+        color: '#A100FF',
     },
     menuContainer: {
         display: 'flex',
@@ -46,20 +50,5 @@ export const NavStyles = makeStyles(theme => ({
     },
     menuItem: {
         fontFamily: 'Montserrat, sans-serif'
-    }
-}))
-
-export const HomeStyles = makeStyles(theme => ({
-    root: {
-        display: 'flex',
-        background: 'url(server/images/background.jpg)'
-    },
-    // backgroundImage: {
-    //     height: '100%',
-    //     width: '100%',
-    //     backgroundImage: `'url("${image}")'`
-    // },
-    textBox: {
-        flexGrow: 1
     }
 }))

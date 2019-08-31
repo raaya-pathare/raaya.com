@@ -12,6 +12,7 @@ const Nav = (props) => {
   const StyledMenu = withStyles({
     paper: {
       border: 'none',
+      backgroundColor: '#fef8f8'
     },
   })(props => (
     <Menu
