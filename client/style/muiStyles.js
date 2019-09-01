@@ -21,16 +21,16 @@ export const theme = createMuiTheme({
 export const NavStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
-        width: '100vw',
+        width: '95%',
         justifyContent: 'space-between',
         marginTop: '25px',
-        backgroundColor: '#fef8f8',
         position: 'fixed'
     },
     name: {
         color: 'black',
         fontFamily: 'Sorts Mill Goudy, serif',
-        fontSize: '18px'
+        fontSize: '18px',
+        textDecoration: 'none'
     },
     icon: {
         color: '#A100FF',
@@ -39,16 +39,30 @@ export const NavStyles = makeStyles(theme => ({
         display: 'flex',
     },
     menu: {
-        width: '600px',
+        width: '700px',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         '& .MuiMenuItem-root': {
             fontSize: '1rem',
-            marginTop: '-5px',
+            marginTop: '-25px',
         },
     },
     menuItem: {
-        fontFamily: 'Montserrat, sans-serif'
+        fontFamily: 'Montserrat, sans-serif',
+        transition: 'all 2s',
+        '&:hover': {
+            backgroundColor: 'transparent',
+            color: '#A100FF',
+        }
+    },
+    menuItemContact: {
+        fontFamily: 'Montserrat, sans-serif',
+        transition: 'all 2s',
+        color: 'white',
+        '&:hover': {
+            backgroundColor: 'transparent',
+            color: '#A100FF',
+        }
     }
 }))
