@@ -36,12 +36,11 @@ class Home extends React.Component {
                 }}>
                     <Box >
                         <Box style={{
-                            flexGrow: 1,
                             position: 'absolute',
                             top: '8%',
                             left: '5%'
                         }}>
-                            <div style={{ display: 'flex' }}>
+                            <div style={{ display: 'flex', width: '90vw' }}>
                                 <Typography style={{
                                     fontSize: '200px',
                                     fontFamily: 'Montserrat, sans-serif',
@@ -56,7 +55,7 @@ class Home extends React.Component {
                                     fontFamily: 'Hammersmith One, sans-serif',
                                     marginTop: '17px',
                                     wordSpacing: '100px',
-                                    letterSpacing: '-0.07em',
+                                    letterSpacing: '-0.1em',
                                     color: '#A100FF'
                                 }}>
                                     Raaya.
