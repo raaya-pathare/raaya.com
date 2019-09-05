@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { NavStyles } from '../style/muiStyles'
-import { Container, Grow, Typography, Button, Menu, Icon, Box } from '@material-ui/core'
+import { Container, Grow, Typography, Button, Menu, Icon, Box, Tooltip } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles';
 
 const Nav = (props) => {
@@ -53,8 +53,13 @@ const Nav = (props) => {
               aria-controls="customized-menu"
               aria-haspopup="true"
               onClick={handleClick}>
-              <Icon className={classes.icon} fontSize=""
-              >menu</Icon>
+                <Tooltip
+                title="Click me!"
+                open={false}
+                enterDelay={4000}>
+                <Icon className={classes.icon} fontSize="medium"
+                >menu</Icon>
+                </Tooltip>
             </Button>
             <StyledMenu
               id="customized-menu"
@@ -89,7 +94,7 @@ const Nav = (props) => {
                   style={{ transformOrigin: '0 0 0' }}
                   {...(pressed ? { timeout: 500 } : {})}
                 >
-                  <Button onClick={handleClose} className={classes.menuItemContact}>Contact</Button>
+                  <Button onClick={handleClose} className={classes.menuItemContact}><Link to="/contact" style={{ color: 'white', textDecoration: 'none' }}>Contact</Link></Button>
                 </Grow>
               </Container>
             </StyledMenu>

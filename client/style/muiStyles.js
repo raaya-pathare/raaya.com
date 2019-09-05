@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/styles'
 import { createMuiTheme } from '@material-ui/core/styles'
-import image from '../images/background.jpg'
 
 export const theme = createMuiTheme({
     palette: {
@@ -60,6 +59,7 @@ export const NavStyles = makeStyles(theme => ({
         fontFamily: 'Montserrat, sans-serif',
         transition: 'all 2s',
         color: 'white',
+        textDecoration: 'none',
         '&:hover': {
             backgroundColor: 'transparent',
             color: '#A100FF',
