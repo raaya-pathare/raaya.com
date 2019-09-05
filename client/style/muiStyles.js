@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/styles'
 import { createMuiTheme } from '@material-ui/core/styles'
-import image from '../images/background.jpg'
+import image from '../images/mountain.jpg'
 
 export const theme = createMuiTheme({
     palette: {
@@ -32,6 +32,10 @@ export const NavStyles = makeStyles(theme => ({
         fontSize: '18px',
         textDecoration: 'none'
     },
+    nameLink: {
+        textDecoration: 'none',
+        color: '#A100FF'
+    },
     icon: {
         color: '#A100FF',
     },
@@ -56,6 +60,13 @@ export const NavStyles = makeStyles(theme => ({
             color: '#A100FF',
         }
     },
+    link: {
+        textDecoration: 'none',
+        color: 'black',
+        '&:hover': {
+            color: '#A100FF',
+        }
+    },
     menuItemContact: {
         fontFamily: 'Montserrat, sans-serif',
         transition: 'all 2s',
@@ -64,5 +75,30 @@ export const NavStyles = makeStyles(theme => ({
             backgroundColor: 'transparent',
             color: '#A100FF',
         }
+    }
+}))
+
+export const AboutStyles = makeStyles(theme => ({
+    root: {
+        display: 'flex',
+        width: '100%',
+    },
+    background: {
+        backgroundImage: `url(${image})`,
+        height: '100vh',
+        width: '100%',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center bottom'
+    },
+    content: {
+        position: 'absolute',
+        top: '30%'
+    },
+    about: {
+        fontFamily: 'Montserrat, sans-serif',
+        fontSize: '200px',
+        fontWeight: 600,
+        color: 'green',
+        letterSpacing: '-0.12em'
     }
 }))

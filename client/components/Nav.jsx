@@ -45,7 +45,7 @@ const Nav = (props) => {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Container maxWidth={false} className={classes.root}>
           <div>
-            <Typography className={classes.name}><Link to="/">raaya pathare</Link>
+            <Typography className={classes.name}><Link to="/" className={classes.nameLink}>raaya pathare</Link>
             </Typography>
           </div>
           <Box>
@@ -68,7 +68,7 @@ const Nav = (props) => {
                   in={pressed}
                   style={{ transformOrigin: '0 0 0' }}
                   {...(pressed ? { timeout: 1800 } : {})}>
-                  <Button onClick={handleClose} className={classes.menuItem}>About</Button>
+                  <Button onClick={handleClose} className={classes.menuItem}><Link to="/about" className={classes.link}>About</Link></Button>
                 </Grow>
                 <Grow
                   in={pressed}
