@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import CV from '../files/cv.pdf'
 import { Container, Typography, Box } from '@material-ui/core'
 import { AboutStyles } from '../style/muiStyles'
 
@@ -17,7 +18,7 @@ const About = (props) => {
                         If you need a little more detail, check out my CV, or <Link to="/contact">get in touch.</Link>
                     </Typography>
                     <Typography className={classes.CVicon}>
-                        <a href="../files/cv.pdf" target="_blank">Download</a>
+                        <a href={CV} target="_blank">Download</a>
                     </Typography>
                     <Typography className={classes.about}>
                         about.
