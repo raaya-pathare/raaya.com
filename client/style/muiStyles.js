@@ -73,7 +73,9 @@ export const NavStyles = makeStyles(theme => ({
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
             fontSize: '2em'
           },
-        color: 'black',
+        [theme.breakpoints.up('lg')]: { // eslint-disable-line no-useless-computed-key
+            color: 'white'
+          },
         '&:hover': {
             backgroundColor: 'transparent',
             color: '#A100FF',
