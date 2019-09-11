@@ -29,7 +29,12 @@ class Home extends React.Component {
                     display: 'flex',
                     backgroundImage: `url(${image})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: '20%, 100%',
+                    backgroundPosition: 'right bottom',
+                    WebkitBackgroundSize: 'cover',
+                    MozBackgroundSize: 'cover',
+                    OBackgroundSize: 'cover',
+                    zIndex: '-1',
+                    overflow: 'hidden',
                     height: '100vh',
                     width: '100vw',
                     justifyContent: 'center'
