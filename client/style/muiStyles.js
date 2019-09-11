@@ -30,10 +30,16 @@ export const NavStyles = makeStyles(theme => ({
         color: 'black',
         fontFamily: 'Sorts Mill Goudy, serif',
         fontSize: '18px',
+        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+            fontSize: '2em'
+          },
         textDecoration: 'none'
     },
     icon: {
         color: '#A100FF',
+        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+            fontSize: '3em'
+          },
     },
     menuContainer: {
         display: 'flex',
@@ -42,15 +48,20 @@ export const NavStyles = makeStyles(theme => ({
         width: '700px',
         display: 'flex',
         flexDirection: 'row',
+        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+            flexDirection: 'column'
+          },
         justifyContent: 'space-between',
         '& .MuiMenuItem-root': {
-            fontSize: '1rem',
             marginTop: '-25px',
         },
     },
     menuItem: {
         fontFamily: 'Montserrat, sans-serif',
         transition: 'all 2s',
+        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+            fontSize: '2em'
+          },
         '&:hover': {
             backgroundColor: 'transparent',
             color: '#A100FF',
@@ -59,7 +70,10 @@ export const NavStyles = makeStyles(theme => ({
     menuItemContact: {
         fontFamily: 'Montserrat, sans-serif',
         transition: 'all 2s',
-        color: 'white',
+        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+            fontSize: '2em'
+          },
+        color: 'black',
         '&:hover': {
             backgroundColor: 'transparent',
             color: '#A100FF',
