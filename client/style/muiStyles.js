@@ -49,7 +49,7 @@ export const homeStyles = makeStyles(theme => ({
         fontWeight: 400,
         letterSpacing: '-0.12em',
         wordSpacing: '-10px',
-        height: '1em'
+        // height: '1em'
     },
     raaya: {
         fontSize: '200px',
