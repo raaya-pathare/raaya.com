@@ -1,23 +1,95 @@
 import React from 'react'
-import { Typography, Box, IconButton } from '@material-ui/core'
-import { homeStyles } from '../style/muiStyles'
+import { Typography, Box, IconButton, useMediaQuery } from '@material-ui/core'
+import { createMuiTheme } from '@material-ui/core/styles'
 
-const Home = (props) => {
-    const classes = homeStyles(props)
-    return (
+import image from '../images/background.jpg'
+
+const textArray = ['Web Developer.', 'UI Designer.', 'UX Designer.', 'Creative.'];
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: '#fca10d'
+        },
+        secondary: {
+            main: '#2327fa'
+        },
+        background: {
+            main: '#2e2e2e'
+        },
+        font: '#fffdfa'
+    },
+    spacing: 8
+})
+
+class Home extends React.Component {
+    constructor() {
+        super();
+        this.state = { textIdx: 0 };
+    }
+
+    componentDidMount() {
+        this.timeout = setInterval(() => {
+            let currentIdx = this.state.textIdx;
+            this.setState({ textIdx: currentIdx + 1 });
+        }, 1500);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timeout);
+    }
+
+    render() {
+        let textThatChanges = textArray[this.state.textIdx % textArray.length];
+        return (
             <>
-                <Box className={classes.background}>
+                <Box style={{
+                    display: 'flex',
+                    backgroundImage: `url(${image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'right bottom',
+                    WebkitBackgroundSize: 'cover',
+                    MozBackgroundSize: 'cover',
+                    OBackgroundSize: 'cover',
+                    zIndex: '-1',
+                    overflow: 'hidden',
+                    height: '100vh',
+                    width: '100vw',
+                    justifyContent: 'center'
+                }}>
                     <Box >
-                        <Box className={classes.allTextBox}>
+                        <Box style={{
+                            position: 'absolute',
+                            top: '8%',
+                            left: '5%'
+                        }}>
                             <div style={{ display: 'flex', width: '90vw' }}>
-                                <Typography className={classes.helloIm}>
+                                <Typography style={{
+                                    fontSize: '200px',
+                                    fontFamily: 'Montserrat, sans-serif',
+                                    fontWeight: 400,
+                                    letterSpacing: '-0.12em',
+                                    wordSpacing: '-10px'
+                                }}>
                                     Hello, I'm
                         </Typography>
-                                <Typography className={classes.raaya}>
+                                <Typography style={{
+                                    fontSize: '200px',
+                                    fontFamily: 'Hammersmith One, sans-serif',
+                                    marginTop: '17px',
+                                    wordSpacing: '100px',
+                                    letterSpacing: '-0.1em',
+                                    color: '#A100FF'
+                                }}>
                                     Raaya.
                         </Typography>
                             </div>
-                            <Typography className={classes.iAmA}>
+                            <Typography style={{
+                                fontSize: '200px',
+                                lineHeight: '50px',
+                                fontFamily: 'Montserrat, sans-serif',
+                                fontWeight: 400,
+                                letterSpacing: '-0.07em',
+                            }}>
                                 I am a
                         </Typography>
                             <br />
@@ -30,12 +102,22 @@ const Home = (props) => {
                                 left: '1%',
                                 top: '103%'
                             }}>
-                                {/* {textThatChanges} */}
+                                {textThatChanges}
                             </Typography>
                         </Box>
                     </Box>
                     <div style={{display: 'flex'}}>
-                    <Box className={classes.iconContainer}>
+                    <Box style={{
+                       height: '50px', 
+                       flexDirection: 'row',
+                       width: '100vw',
+                       marginLeft: '7vw',
+                       marginBottom: '20px',
+                       alignSelf: 'flex-end',
+                       '@media (minWidth:960px)': { 
+                        justifyContent: 'space-evenly'
+                      },
+                    }}>
                         <a target="_blank" href="https://github.com/raaya-pathare">
                             <IconButton>
                                 <svg 
@@ -156,6 +238,7 @@ const Home = (props) => {
             </>
         )
     }
+}
 
 
 export default Home
