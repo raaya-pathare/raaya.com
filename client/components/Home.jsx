@@ -1,9 +1,12 @@
 import React from 'react'
 import { Typography, Box, IconButton } from '@material-ui/core'
 import { homeStyles } from '../style/muiStyles'
+// import '../style/cursor.css'
+import Typist from 'react-typist'
 
 const Home = (props) => {
     const classes = homeStyles(props)
+
     return (
             <>
                 <Box className={classes.background}>
@@ -22,15 +25,20 @@ const Home = (props) => {
                         </Typography>
                             <br />
                             <br />
-                            <Typography style={{
-                                fontFamily: 'Sorts Mill Goudy, serif',
-                                fontSize: '170px',
-                                color: '#A100FF',
-                                position: 'absolute',
-                                left: '1%',
-                                top: '103%'
-                            }}>
-                                {/* {textThatChanges} */}
+                            <Typography className={classes.typedText}>
+                                <Typist
+                                cursor={{ hideWhenDone: true, hideWhenDoneDelay: 200 }}>
+                                    Web Developer.
+                                    <Typist.Backspace count={14} delay={800} />
+                                    <Typist.Delay ms={500} />
+                                    UI Designer.
+                                    <Typist.Backspace count={12} delay={800} />
+                                    <Typist.Delay ms={500} />
+                                    UX Designer.
+                                    <Typist.Backspace count={12} delay={800} />
+                                    <Typist.Delay ms={500} />
+                                    Creative.
+                                </Typist>
                             </Typography>
                         </Box>
                     </Box>

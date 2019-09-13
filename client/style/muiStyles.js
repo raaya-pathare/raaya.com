@@ -62,12 +62,20 @@ export const homeStyles = makeStyles(theme => ({
         letterSpacing: '-0.07em',
     },
     iconContainer: {
-        height: '50px', 
+        height: '50px',
         flexDirection: 'row',
         width: '100vw',
         marginLeft: '7vw',
         marginBottom: '20px',
-        alignSelf: 'flex-end', 
+        alignSelf: 'flex-end',
+    },
+    typedText: {
+        fontFamily: 'Sorts Mill Goudy, serif',
+        fontSize: '170px',
+        color: '#A100FF',
+        position: 'absolute',
+        left: '1%',
+        top: '103%'
     }
 }))
 
