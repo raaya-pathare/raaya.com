@@ -37,29 +37,43 @@ export const homeStyles = makeStyles(theme => ({
     allTextBox: {
         position: 'absolute',
         top: '8%',
-        left: '5%'
+        left: '5%',
+        display: 'flex',
+        flexDirection: 'column',
+        width: '90vw',
+        lineHeight: '20px'
     },
     helloIm: {
         fontSize: '200px',
         fontFamily: 'Montserrat, sans-serif',
         fontWeight: 400,
         letterSpacing: '-0.12em',
-        wordSpacing: '-10px'
+        wordSpacing: '-10px',
+        height: '1em'
     },
     raaya: {
         fontSize: '200px',
         fontFamily: 'Hammersmith One, sans-serif',
-        marginTop: '17px',
         wordSpacing: '100px',
         letterSpacing: '-0.1em',
-        color: '#A100FF'
+        color: '#A100FF',
     },
     iAmA: {
         fontSize: '200px',
-        lineHeight: '50px',
         fontFamily: 'Montserrat, sans-serif',
         fontWeight: 400,
         letterSpacing: '-0.07em',
+        height: '1em'
+    },
+    typedText: {
+        fontFamily: 'Sorts Mill Goudy, serif',
+        fontSize: '170px',
+        color: '#A100FF',
+        marginTop: '0.3em',
+        position: 'absolute',
+        left: '1%',
+        top: '103%',
+        height: '1em'
     },
     iconContainer: {
         height: '50px',
@@ -69,14 +83,6 @@ export const homeStyles = makeStyles(theme => ({
         marginBottom: '20px',
         alignSelf: 'flex-end',
     },
-    typedText: {
-        fontFamily: 'Sorts Mill Goudy, serif',
-        fontSize: '170px',
-        color: '#A100FF',
-        position: 'absolute',
-        left: '1%',
-        top: '103%'
-    }
 }))
 
 export const NavStyles = makeStyles(theme => ({

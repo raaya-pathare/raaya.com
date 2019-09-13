@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, Box, IconButton } from '@material-ui/core'
+import { Typography, Box, IconButton, Grid } from '@material-ui/core'
 import { homeStyles } from '../style/muiStyles'
 // import '../style/cursor.css'
 import Typist from 'react-typist'
@@ -9,22 +9,20 @@ const Home = (props) => {
 
     return (
             <>
-                <Box className={classes.background}>
-                    <Box >
-                        <Box className={classes.allTextBox}>
-                            <div style={{ display: 'flex', width: '90vw' }}>
+                <Grid container className={classes.background}>
+                        <Grid container className={classes.allTextBox}>
+                            <Grid item>
                                 <Typography className={classes.helloIm}>
                                     Hello, I'm
-                        </Typography>
-                                <Typography className={classes.raaya}>
-                                    Raaya.
-                        </Typography>
-                            </div>
+                                    <span className={classes.raaya}>Raaya.</span>
+                                </Typography>
+                            </Grid>
+                            <Grid item>
                             <Typography className={classes.iAmA}>
                                 I am a
-                        </Typography>
-                            <br />
-                            <br />
+                            </Typography>
+                            </Grid>
+                            <Grid item>
                             <Typography className={classes.typedText}>
                                 <Typist
                                 cursor={{ hideWhenDone: true, hideWhenDoneDelay: 200 }}>
@@ -40,8 +38,8 @@ const Home = (props) => {
                                     Creative.
                                 </Typist>
                             </Typography>
-                        </Box>
-                    </Box>
+                            </Grid>
+                        </Grid>
                     <div style={{display: 'flex'}}>
                     <Box className={classes.iconContainer}>
                         <a target="_blank" href="https://github.com/raaya-pathare">
@@ -160,7 +158,7 @@ const Home = (props) => {
                         </a>
                     </Box>
                     </div>
-                </Box>
+                </Grid>
             </>
         )
     }
