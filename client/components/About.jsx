@@ -15,17 +15,17 @@ const About = (props) => {
                 container
                 className={classes.content}
                 >
-                    <Grid item xs={12} m={6} lg={8} className={classes.aboutTextContainer}>
+                    <Grid item className={classes.aboutTextContainer}>
                         <Slide in={true} direction="right" timeout={1300} mountOnEnter unmountOnExit>
                         <Typography className={classes.aboutText}>
                             "I'm passionate about well designed technology - if you are too, we'll get along.
                             Web development allows me to be my most creative while also satisfying my desire to learn.
                             On the weekend you'll find me at an easel, with my dog at a far away beach, or scoping out the best dumpling joint in Auckland.
-                            If you need a little more detail download my CV or <Link className={classes.link} to="/contact">get in touch."</Link>
+                            If you need a little more detail download my CV below. Otherwise,  <Link className={classes.link} to="/contact">get in touch.</Link>"
                         </Typography>
                         </Slide>
                     </Grid>
-                    <Grid item xs={12} m={3} lg={3} 
+                    <Grid item 
                     className={classes.download}>
                         <Slide in={true} direction="left" timeout={1300} mountOnEnter unmountOnExit>
                         <Button className={classes.downloadButton}>
@@ -44,16 +44,14 @@ const About = (props) => {
                 </Grid>
                 <Grid item xs={12}> 
                         <div className={classes.aboutContainer}>
-                        {/* <Slide in={true} direction="up" timeout={1300} mountOnEnter unmountOnExit> */}
                             <Typing  
                             hideCursor={true} 
                             className={classes.aboutWord} speed={200}>
                             <Typing.Delay ms={1300} />
                             about.
                         </Typing>
-                        {/* </Slide> */}
                         </div>
-                    </Grid>
+                </Grid>
             </Grid>
     )
 }

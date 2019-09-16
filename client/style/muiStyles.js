@@ -256,57 +256,51 @@ export const AboutStyles = makeStyles(theme => ({
         width: '100%',
         backgroundSize: 'cover',
         backgroundPosition: 'center bottom',
-        top: '50%',
-        justifyContent: 'center'
+        [theme.breakpoints.down('md')]: {
+            backgroundPosition: '50% 50%'
+        },
+        justifyContent: 'center',
+        overflow: 'hidden',
     },
     content: {
-        width: '50%',
         display: 'flex',
-        marginTop: '8em',
-        alignItems: 'center',
+        flexDirection: 'column',
         justifyContent: 'space-evenly',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
-            alignItems: 'flex-end',
+        marginTop: '8em',
+        [theme.breakpoints.down('md')]: {
             marginTop: '12em',
-          },
-        ['@media only screen and (orientation: landscape)']: {
-            width: '80%',
-            marginTop: '8em'
         },
     },
     aboutTextContainer: {
-        width: '470px',
         alignItems: 'center',
+        alignSelf: 'center',
+        width: '35vw',
+        [theme.breakpoints.down('md')]: {
+            width: '50vw'
+        },
         justifyContent: 'center',
     },
     aboutText: {
-        fontSize: '20px',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
-            fontSize: '30px',
-            width: '550px'
-          },
         ['@media only screen and (orientation: landscape)']: {
-            fontSize: '1em'
+            fontSize: '1.2em',
         },
-        width: '470px',
-        margin: 'auto',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '2em'
+        },
+        alignSelf: 'center',
         fontFamily: 'Montserrat, sans-serif',
-        fontWeight: '600',
+        fontWeight: '400',
         wordSpacing: '1px',
         letterSpacing: '-0.05em',
     },
     download: {
-        width: '12em',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+        [theme.breakpoints.down('md')]: {
             marginTop: '12em',
-          },
-          ['@media only screen and (orientation: landscape)']: {
+        },
+        ['@media only screen and (orientation: landscape)']: {
             marginTop: '3em'
         },
-        textAlign: 'center',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
+        alignSelf: 'center'
     },
     downloadButton: {
         borderRadius: '50%',
@@ -319,16 +313,14 @@ export const AboutStyles = makeStyles(theme => ({
     },
     aboutContainer: {
         textAlign: 'center',
-        marginBottom: '5em',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
-            alignItems: 'flex-end'
-          }
+        marginBottom: '20em',
+        height: '1em',
     },
     aboutWord: {
         fontFamily: 'Montserrat, sans-serif',
-        fontSize: '280px',
-        ['@media only screen and (orientation: landscape)']: {
-            fontSize: '12em'
+        fontSize: '260px',
+        [theme.breakpoints.between('md', 'lg')]: {
+            fontSize: '200px'
         },
         fontWeight: 600,
         color: 'white',
