@@ -250,69 +250,57 @@ export const NavStyles = makeStyles(theme => ({
 }))
 
 export const AboutStyles = makeStyles(theme => ({
-    content: {
-        width: '50%',
-        marginTop: '8em',
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
-            alignItems: 'flex-end',
-            marginTop: '12em',
-          }
-    },
     background: {
         backgroundImage: `url(${image2})`,
         height: '100vh',
         width: '100%',
         backgroundSize: 'cover',
         backgroundPosition: 'center bottom',
-        top: '50%',
-        justifyContent: 'center'
+        [theme.breakpoints.down('md')]: {
+            backgroundPosition: '50% 50%'
+        },
+        justifyContent: 'center',
+        overflow: 'hidden',
+    },
+    content: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-evenly',
+        marginTop: '8em',
+        [theme.breakpoints.down('md')]: {
+            marginTop: '12em',
+        },
     },
     aboutTextContainer: {
-        width: '470px',
-        height: '250px',
         alignItems: 'center',
+        alignSelf: 'center',
+        width: '35vw',
+        [theme.breakpoints.down('md')]: {
+            width: '50vw'
+        },
         justifyContent: 'center',
     },
     aboutText: {
-        fontSize: '20px',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
-            fontSize: '30px',
-            width: '550px'
-          },
-        width: '470px',
-        height: '250px',
-        margin: 'auto',
+        ['@media only screen and (orientation: landscape)']: {
+            fontSize: '1.2em',
+        },
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '2em'
+        },
+        alignSelf: 'center',
         fontFamily: 'Montserrat, sans-serif',
-        fontWeight: '600',
+        fontWeight: '400',
         wordSpacing: '1px',
         letterSpacing: '-0.05em',
     },
-    aboutContainer: {
-        textAlign: 'center',
-        marginBottom: '5em',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
-            alignItems: 'flex-end'
-          }
-    },
-    aboutWord: {
-        fontFamily: 'Montserrat, sans-serif',
-        fontSize: '280px',
-        fontWeight: 600,
-        color: 'white',
-        letterSpacing: '-0.10em'
-    },
     download: {
-        width: '12em',
-        height: '100px',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+        [theme.breakpoints.down('md')]: {
             marginTop: '12em',
-          },
-        textAlign: 'center',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            marginTop: '3em'
+        },
+        alignSelf: 'center'
     },
     downloadButton: {
         borderRadius: '50%',
@@ -323,28 +311,23 @@ export const AboutStyles = makeStyles(theme => ({
         fontSize: '50px',
         fontWeight: '800',
     },
+    aboutContainer: {
+        textAlign: 'center',
+        marginBottom: '20em',
+        height: '1em',
+    },
+    aboutWord: {
+        fontFamily: 'Montserrat, sans-serif',
+        fontSize: '260px',
+        [theme.breakpoints.between('md', 'lg')]: {
+            fontSize: '200px'
+        },
+        fontWeight: 600,
+        color: 'white',
+        letterSpacing: '-0.10em'
+    },
     link: {
         textDecoration: 'none',
         color: '#A100FF'
     }
 }))
-
-// const webkitBounce = keyframes`
-//     0%, 20%, 50%, 80%, 100% {
-//         -webkit-transform: translateY(0);
-//         transform: translateY(0); 
-//     }
-//     10% {
-//         -webkit-transform: translateY(-1rem);
-//         transform: translateY(-1rem);
-//     }`
-
-// const bounce = keyframes`
-//     0%, 20%, 50%, 80%, 100% {
-//         -webkit-transform: translateY(0);
-//         transform: translateY(0); 
-//     }
-//     10% {
-//         -webkit-transform: translateY(-1rem);
-//         transform: translateY(-1rem); 
-//     }`
