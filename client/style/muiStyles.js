@@ -250,16 +250,6 @@ export const NavStyles = makeStyles(theme => ({
 }))
 
 export const AboutStyles = makeStyles(theme => ({
-    content: {
-        width: '50%',
-        marginTop: '8em',
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
-            alignItems: 'flex-end',
-            marginTop: '12em',
-          }
-    },
     background: {
         backgroundImage: `url(${image2})`,
         height: '100vh',
@@ -269,9 +259,23 @@ export const AboutStyles = makeStyles(theme => ({
         top: '50%',
         justifyContent: 'center'
     },
+    content: {
+        width: '50%',
+        display: 'flex',
+        marginTop: '8em',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+            alignItems: 'flex-end',
+            marginTop: '12em',
+          },
+        ['@media only screen and (orientation: landscape)']: {
+            width: '80%',
+            marginTop: '8em'
+        },
+    },
     aboutTextContainer: {
         width: '470px',
-        height: '250px',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -281,34 +285,24 @@ export const AboutStyles = makeStyles(theme => ({
             fontSize: '30px',
             width: '550px'
           },
+        ['@media only screen and (orientation: landscape)']: {
+            fontSize: '1em'
+        },
         width: '470px',
-        height: '250px',
         margin: 'auto',
         fontFamily: 'Montserrat, sans-serif',
         fontWeight: '600',
         wordSpacing: '1px',
         letterSpacing: '-0.05em',
     },
-    aboutContainer: {
-        textAlign: 'center',
-        marginBottom: '5em',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
-            alignItems: 'flex-end'
-          }
-    },
-    aboutWord: {
-        fontFamily: 'Montserrat, sans-serif',
-        fontSize: '280px',
-        fontWeight: 600,
-        color: 'white',
-        letterSpacing: '-0.10em'
-    },
     download: {
         width: '12em',
-        height: '100px',
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
             marginTop: '12em',
           },
+          ['@media only screen and (orientation: landscape)']: {
+            marginTop: '3em'
+        },
         textAlign: 'center',
         display: 'flex',
         alignItems: 'center',
@@ -323,28 +317,25 @@ export const AboutStyles = makeStyles(theme => ({
         fontSize: '50px',
         fontWeight: '800',
     },
+    aboutContainer: {
+        textAlign: 'center',
+        marginBottom: '5em',
+        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+            alignItems: 'flex-end'
+          }
+    },
+    aboutWord: {
+        fontFamily: 'Montserrat, sans-serif',
+        fontSize: '280px',
+        ['@media only screen and (orientation: landscape)']: {
+            fontSize: '12em'
+        },
+        fontWeight: 600,
+        color: 'white',
+        letterSpacing: '-0.10em'
+    },
     link: {
         textDecoration: 'none',
         color: '#A100FF'
     }
 }))
-
-// const webkitBounce = keyframes`
-//     0%, 20%, 50%, 80%, 100% {
-//         -webkit-transform: translateY(0);
-//         transform: translateY(0); 
-//     }
-//     10% {
-//         -webkit-transform: translateY(-1rem);
-//         transform: translateY(-1rem);
-//     }`
-
-// const bounce = keyframes`
-//     0%, 20%, 50%, 80%, 100% {
-//         -webkit-transform: translateY(0);
-//         transform: translateY(0); 
-//     }
-//     10% {
-//         -webkit-transform: translateY(-1rem);
-//         transform: translateY(-1rem); 
-//     }`

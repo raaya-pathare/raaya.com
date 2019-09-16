@@ -1,20 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CV from '../files/cv.pdf'
-import Cursor from './Cursor'
+// import Cursor from './Cursor'
 import Typing from 'react-typing-animation'
-import { Container, Typography, Box, Slide, Grid, Button, Icon, Tooltip, Fade } from '@material-ui/core'
+import { Typography, Slide, Grid, Button, Icon, Tooltip, Fade } from '@material-ui/core'
 import { AboutStyles } from '../style/muiStyles'
+import styled, { keyframes } from 'styled-components'
 
 const About = (props) => {
     const classes = AboutStyles(props)
+
+    // const CursorSpan = styled.span`
+    // font-weight: 600
+    // color: white
+    // font-size: 280px
+    // @media (min-width: 200px):{
+    //     color: black
+    // }`
+
+    // @media (max-width: 768px) {
+    //     flex-direction: column;
+    //   }
 
     return (
             <Grid container className={classes.background}>
                 <Grid 
                 container
                 className={classes.content}
-                spacing={0}
                 >
                     <Grid item xs={12} m={6} lg={8} className={classes.aboutTextContainer}>
                         <Slide in={true} direction="right" timeout={1300} mountOnEnter unmountOnExit>
@@ -46,7 +58,9 @@ const About = (props) => {
                 <Grid item xs={12}> 
                         <div className={classes.aboutContainer}>
                         {/* <Slide in={true} direction="up" timeout={1300} mountOnEnter unmountOnExit> */}
-                            <Typing  cursor={<Cursor />} className={classes.aboutWord} speed={200}>
+                            <Typing  
+                            hideCursor={true} 
+                            className={classes.aboutWord} speed={200}>
                             <Typing.Delay ms={1300} />
                             about.
                         </Typing>
