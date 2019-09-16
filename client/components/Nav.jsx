@@ -52,6 +52,7 @@ const Nav = (props) => {
             <Button
               aria-controls="customized-menu"
               aria-haspopup="true"
+              className={classes.button}
               onClick={handleClick}>
               <Icon className={classes.icon}
               >menu</Icon>

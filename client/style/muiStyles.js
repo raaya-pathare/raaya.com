@@ -173,8 +173,12 @@ export const NavStyles = makeStyles(theme => ({
         },
         textDecoration: 'none'
     },
+    button: {
+        backgroundColor: '#FFFFFF1A'
+    },
     icon: {
         color: '#A100FF',
+        fontSize: '2.5em',
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
             fontSize: '3em'
         },
