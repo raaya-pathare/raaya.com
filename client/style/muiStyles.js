@@ -16,7 +16,16 @@ export const theme = createMuiTheme({
         },
         font: '#fffdfa'
     },
-    spacing: 8
+    spacing: 8,
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 600,
+            md: 700,
+            lg: 1280,
+            xl: 1920,
+        }
+    }
 })
 
 export const homeStyles = makeStyles(theme => ({
@@ -36,44 +45,82 @@ export const homeStyles = makeStyles(theme => ({
     },
     allTextBox: {
         position: 'absolute',
-        top: '8%',
+        top: '15%',
+        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+            top: '20%'
+          },
         left: '5%',
         display: 'flex',
         flexDirection: 'column',
         width: '90vw',
-        lineHeight: '20px'
+        lineHeight: '1em'
     },
     helloIm: {
         fontSize: '200px',
+        [theme.breakpoints.down('md' )]: {
+            fontSize: '180px'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            fontSize: '12vw'
+        },
         fontFamily: 'Montserrat, sans-serif',
         fontWeight: 400,
         letterSpacing: '-0.12em',
         wordSpacing: '-10px',
-        // height: '1em'
+        height: '1em',
+        lineHeight: '1em'
     },
     raaya: {
         fontSize: '200px',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '180px'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            fontSize: '12vw'
+        },
         fontFamily: 'Hammersmith One, sans-serif',
-        wordSpacing: '100px',
         letterSpacing: '-0.1em',
         color: '#A100FF',
+        height: '1em',
+        lineHeight: '1em'
+    },
+    firstLine: {
+        [theme.breakpoints.down('md')]: {
+            height: '25em'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            height: '12vw'
+        },
     },
     iAmA: {
         fontSize: '200px',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '180px'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            fontSize: '12vw'
+        },
         fontFamily: 'Montserrat, sans-serif',
         fontWeight: 400,
         letterSpacing: '-0.07em',
-        height: '1em'
+        height: '1em',
+        lineHeight: '1em'
     },
     typedText: {
         fontFamily: 'Sorts Mill Goudy, serif',
         fontSize: '170px',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '120px'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            fontSize: '10vw'
+        },
         color: '#A100FF',
         marginTop: '0.3em',
         position: 'absolute',
         left: '1%',
-        top: '103%',
-        height: '1em'
+        height: '1em',
+        lineHeight: '1em'
     },
     iconContainer: {
         height: '50px',
@@ -100,6 +147,9 @@ export const NavStyles = makeStyles(theme => ({
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
             fontSize: '2em'
         },
+        ['@media only screen and (orientation: landscape)']: {
+            fontSize: '1.5em'
+        },
         textDecoration: 'none'
     },
     icon: {
@@ -116,7 +166,11 @@ export const NavStyles = makeStyles(theme => ({
         display: 'flex',
         flexDirection: 'row',
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
-            flexDirection: 'column'
+            flexDirection: 'column',
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            flexDirection: 'row',
+            width: '60vw'
         },
         justifyContent: 'space-between',
         '& .MuiMenuItem-root': {
@@ -127,7 +181,10 @@ export const NavStyles = makeStyles(theme => ({
         fontFamily: 'Montserrat, sans-serif',
         transition: 'all 2s',
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
-            fontSize: '2em'
+            fontSize: '1.7em'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            fontSize: '1em'
         },
         '&:hover': {
             backgroundColor: 'transparent',
@@ -138,7 +195,10 @@ export const NavStyles = makeStyles(theme => ({
         fontFamily: 'Montserrat, sans-serif',
         transition: 'all 2s',
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
-            fontSize: '2em'
+            fontSize: '1.7em'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            fontSize: '1em'
         },
         [theme.breakpoints.up('lg')]: { // eslint-disable-line no-useless-computed-key
             color: 'white'

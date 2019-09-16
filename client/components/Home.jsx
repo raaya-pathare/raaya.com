@@ -11,7 +11,7 @@ const Home = (props) => {
             <>
                 <Grid container className={classes.background}>
                         <Grid container className={classes.allTextBox}>
-                            <Grid item>
+                            <Grid item className={classes.firstLine}>
                                 <Typography className={classes.helloIm}>
                                     Hello, I'm
                                     <span className={classes.raaya}>Raaya.</span>
