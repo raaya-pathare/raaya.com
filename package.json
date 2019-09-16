@@ -37,8 +37,8 @@
     "material-design-icons": "^3.0.1",
     "react-router-dom": "^5.0.1",
     "react-transition-group": "^4.2.2",
-    "react-typist": "^2.0.5",
     "react-typing-animation": "^1.6.2",
+    "react-typist": "^2.0.5",
     "styled-components": "^4.3.2",
     "superagent": "^5.0.2"
   },

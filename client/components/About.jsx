@@ -5,8 +5,6 @@ import Cursor from './Cursor'
 import Typing from 'react-typing-animation'
 import { Container, Typography, Box, Slide, Grid, Button, Icon, Tooltip, Fade } from '@material-ui/core'
 import { AboutStyles } from '../style/muiStyles'
-import styled, { keyframes } from 'styled-components'
-
 
 const About = (props) => {
     const classes = AboutStyles(props)

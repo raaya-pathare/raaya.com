@@ -2,7 +2,8 @@ import { makeStyles } from '@material-ui/styles'
 import { createMuiTheme } from '@material-ui/core/styles'
 // import styled, { keyframes } from 'styled-components'
 
-import image from '../images/mountain.jpg'
+import image from '../images/background.jpg'
+import image2 from '../images/mountain.jpg'
 
 
 export const theme = createMuiTheme({
@@ -260,7 +261,7 @@ export const AboutStyles = makeStyles(theme => ({
           }
     },
     background: {
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url(${image2})`,
         height: '100vh',
         width: '100%',
         backgroundSize: 'cover',
@@ -316,7 +317,7 @@ export const AboutStyles = makeStyles(theme => ({
     downloadButton: {
         borderRadius: '50%',
         padding: '15px',
-        // animation: `${bounce} 2s infinite`
+        backgroundColor: '#0000001A'
     },
     CVicon: {
         fontSize: '50px',
