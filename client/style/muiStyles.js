@@ -45,7 +45,7 @@ export const homeStyles = makeStyles(theme => ({
     },
     allTextBox: {
         position: 'absolute',
-        top: '15%',
+        top: '13%',
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
             top: '20%'
           },
@@ -124,12 +124,33 @@ export const homeStyles = makeStyles(theme => ({
     },
     iconContainer: {
         height: '50px',
-        flexDirection: 'row',
+        display: 'flex',
         width: '100vw',
-        marginLeft: '7vw',
+        marginLeft: '4vw',
         marginBottom: '20px',
+        [theme.breakpoints.down('md')]: {
+            marginBottom: '80px',
+            justifyContent: 'center'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            marginBottom: '20px',
+            justifyContent: 'flex-start'
+        },
         alignSelf: 'flex-end',
     },
+    icon: {
+        height: '30px',
+        width: '30px',
+        [theme.breakpoints.down('md')]: {
+            height: '60px',
+            width: '60px',
+            marginRight: '10px',
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            height: '30px',
+            width: '30px'
+        },
+    }
 }))
 
 export const NavStyles = makeStyles(theme => ({

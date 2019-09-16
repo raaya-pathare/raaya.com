@@ -40,14 +40,11 @@ const Home = (props) => {
                             </Typography>
                             </Grid>
                         </Grid>
-                    <div style={{display: 'flex'}}>
                     <Box className={classes.iconContainer}>
                         <a target="_blank" href="https://github.com/raaya-pathare">
                             <IconButton>
-                                <svg 
+                                <svg className={classes.icon}
                                 viewBox="0 0 438.549 438.549"
-                                    height='30px'
-                                    width='30px'
                                 >
                                     <g
                                         id="g4">
@@ -105,7 +102,7 @@ const Home = (props) => {
                         </a>
                         <a target="_blank" href="https://www.linkedin.com/in/raaya-pathare-422a14184/">
                             <IconButton>
-                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            <svg className={classes.icon} version="1.0" xmlns="http://www.w3.org/2000/svg"
                             width="30px" height="30px" viewBox="0 0 512.000000 512.000000"
                             >
                             <g transform="translate(-63.000000,582.000000) scale(0.125000,-0.125000)"
@@ -127,7 +124,7 @@ const Home = (props) => {
                         </a>
                         <a target="_blank" href="https://www.instagram.com/by.raaya/?hl=en">
                             <IconButton>
-                            <svg version="1.0"
+                            <svg className={classes.icon} version="1.0"
                             width="30px" height="30px" viewBox="0 0 582.000000 602.000000"
                             preserveAspectRatio="xMidYMid meet" style={{ borderRadius: '50%'}}>
                             <g transform="translate(-140.000000,710.000000) scale(0.170000,-0.170000)"
@@ -157,7 +154,6 @@ const Home = (props) => {
                             </IconButton>
                         </a>
                     </Box>
-                    </div>
                 </Grid>
             </>
         )
