@@ -1,109 +1,50 @@
 import React from 'react'
-import { Typography, Box, IconButton } from '@material-ui/core'
-import image from '../images/background.jpg'
+import { Typography, Box, IconButton, Grid } from '@material-ui/core'
+import { homeStyles } from '../style/muiStyles'
+// import '../style/cursor.css'
+import Typist from 'react-typist'
 
-const textArray = ['Web Developer.', 'UI Designer.', 'UX Designer.', 'Artist.'];
+const Home = (props) => {
+    const classes = homeStyles(props)
 
-class Home extends React.Component {
-    constructor() {
-        super();
-        this.state = { textIdx: 0 };
-    }
-
-    componentDidMount() {
-        this.timeout = setInterval(() => {
-            let currentIdx = this.state.textIdx;
-            this.setState({ textIdx: currentIdx + 1 });
-        }, 1500);
-    }
-
-    componentDidUnmount() {
-        clearInterval(this.timeout);
-    }
-
-    render() {
-        let textThatChanges = textArray[this.state.textIdx % textArray.length];
-        return (
+    return (
             <>
-                <Box style={{
-                    display: 'flex',
-                    backgroundImage: `url(${image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'right bottom',
-                    WebkitBackgroundSize: 'cover',
-                    MozBackgroundSize: 'cover',
-                    OBackgroundSize: 'cover',
-                    zIndex: '-1',
-                    overflow: 'hidden',
-                    height: '100vh',
-                    width: '100vw',
-                    justifyContent: 'center'
-                }}>
-                    <Box >
-                        <Box style={{
-                            position: 'absolute',
-                            top: '8%',
-                            left: '5%'
-                        }}>
-                            <div style={{ display: 'flex', width: '90vw' }}>
-                                <Typography style={{
-                                    fontSize: '200px',
-                                    fontFamily: 'Montserrat, sans-serif',
-                                    fontWeight: 400,
-                                    letterSpacing: '-0.12em',
-                                    wordSpacing: '-10px'
-                                }}>
+                <Grid container className={classes.background}>
+                        <Grid container className={classes.allTextBox}>
+                            <Grid item className={classes.firstLine}>
+                                <Typography className={classes.helloIm}>
                                     Hello, I'm
-                        </Typography>
-                                <Typography style={{
-                                    fontSize: '200px',
-                                    fontFamily: 'Hammersmith One, sans-serif',
-                                    marginTop: '17px',
-                                    wordSpacing: '100px',
-                                    letterSpacing: '-0.1em',
-                                    color: '#A100FF'
-                                }}>
-                                    Raaya.
-                        </Typography>
-                            </div>
-                            <Typography style={{
-                                fontSize: '200px',
-                                lineHeight: '50px',
-                                fontFamily: 'Montserrat, sans-serif',
-                                fontWeight: 400,
-                                letterSpacing: '-0.07em',
-                            }}>
+                                    <span className={classes.raaya}>Raaya.</span>
+                                </Typography>
+                            </Grid>
+                            <Grid item>
+                            <Typography className={classes.iAmA}>
                                 I am a
-                        </Typography>
-                            <br />
-                            <br />
-                            <Typography style={{
-                                fontFamily: 'Sorts Mill Goudy, serif',
-                                fontSize: '170px',
-                                color: '#A100FF',
-                                position: 'absolute',
-                                left: '1%',
-                                top: '103%'
-                            }}>
-                                {textThatChanges}
                             </Typography>
-                        </Box>
-                    </Box>
-                    <div style={{display: 'flex'}}>
-                    <Box style={{
-                       height: '50px', 
-                       flexDirection: 'row',
-                       width: '100vw',
-                       marginLeft: '7vw',
-                       marginBottom: '15px',
-                       alignSelf: 'flex-end',
-                    }}>
+                            </Grid>
+                            <Grid item>
+                            <Typography className={classes.typedText}>
+                                <Typist
+                                cursor={{ hideWhenDone: true, hideWhenDoneDelay: 200 }}>
+                                    Web Developer.
+                                    <Typist.Backspace count={14} delay={800} />
+                                    <Typist.Delay ms={500} />
+                                    UI Designer.
+                                    <Typist.Backspace count={12} delay={800} />
+                                    <Typist.Delay ms={500} />
+                                    UX Designer.
+                                    <Typist.Backspace count={12} delay={800} />
+                                    <Typist.Delay ms={500} />
+                                    Creative.
+                                </Typist>
+                            </Typography>
+                            </Grid>
+                        </Grid>
+                    <Box className={classes.iconContainer}>
                         <a target="_blank" href="https://github.com/raaya-pathare">
                             <IconButton>
-                                <svg 
+                                <svg className={classes.icon}
                                 viewBox="0 0 438.549 438.549"
-                                height="30px"
-                                width="30px"
                                 >
                                     <g
                                         id="g4">
@@ -161,7 +102,7 @@ class Home extends React.Component {
                         </a>
                         <a target="_blank" href="https://www.linkedin.com/in/raaya-pathare-422a14184/">
                             <IconButton>
-                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            <svg className={classes.icon} version="1.0" xmlns="http://www.w3.org/2000/svg"
                             width="30px" height="30px" viewBox="0 0 512.000000 512.000000"
                             >
                             <g transform="translate(-63.000000,582.000000) scale(0.125000,-0.125000)"
@@ -183,7 +124,7 @@ class Home extends React.Component {
                         </a>
                         <a target="_blank" href="https://www.instagram.com/by.raaya/?hl=en">
                             <IconButton>
-                            <svg version="1.0"
+                            <svg className={classes.icon} version="1.0"
                             width="30px" height="30px" viewBox="0 0 582.000000 602.000000"
                             preserveAspectRatio="xMidYMid meet" style={{ borderRadius: '50%'}}>
                             <g transform="translate(-140.000000,710.000000) scale(0.170000,-0.170000)"
@@ -213,12 +154,10 @@ class Home extends React.Component {
                             </IconButton>
                         </a>
                     </Box>
-                    </div>
-                </Box>
+                </Grid>
             </>
         )
     }
-}
 
 
 export default Home
