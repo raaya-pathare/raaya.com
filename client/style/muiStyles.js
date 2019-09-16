@@ -1,6 +1,8 @@
 import { makeStyles } from '@material-ui/styles'
 import { createMuiTheme } from '@material-ui/core/styles'
-import image from '../images/background.jpg'
+// import styled, { keyframes } from 'styled-components'
+
+import image from '../images/mountain.jpg'
 
 
 export const theme = createMuiTheme({
@@ -176,6 +178,10 @@ export const NavStyles = makeStyles(theme => ({
     button: {
         backgroundColor: '#FFFFFF1A'
     },
+    nameLink: {
+        textDecoration: 'none',
+        color: '#A100FF'
+    },
     icon: {
         color: '#A100FF',
         fontSize: '2.5em',
@@ -216,6 +222,13 @@ export const NavStyles = makeStyles(theme => ({
             color: '#A100FF',
         }
     },
+    link: {
+        textDecoration: 'none',
+        color: 'black',
+        '&:hover': {
+            color: '#A100FF',
+        }
+    },
     menuItemContact: {
         fontFamily: 'Montserrat, sans-serif',
         transition: 'all 2s',
@@ -234,3 +247,103 @@ export const NavStyles = makeStyles(theme => ({
         }
     }
 }))
+
+export const AboutStyles = makeStyles(theme => ({
+    content: {
+        width: '50%',
+        marginTop: '8em',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+            alignItems: 'flex-end',
+            marginTop: '12em',
+          }
+    },
+    background: {
+        backgroundImage: `url(${image})`,
+        height: '100vh',
+        width: '100%',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center bottom',
+        top: '50%',
+        justifyContent: 'center'
+    },
+    aboutTextContainer: {
+        width: '470px',
+        height: '250px',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    aboutText: {
+        fontSize: '20px',
+        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+            fontSize: '30px',
+            width: '550px'
+          },
+        width: '470px',
+        height: '250px',
+        margin: 'auto',
+        fontFamily: 'Montserrat, sans-serif',
+        fontWeight: '600',
+        wordSpacing: '1px',
+        letterSpacing: '-0.05em',
+    },
+    aboutContainer: {
+        textAlign: 'center',
+        marginBottom: '5em',
+        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+            alignItems: 'flex-end'
+          }
+    },
+    aboutWord: {
+        fontFamily: 'Montserrat, sans-serif',
+        fontSize: '280px',
+        fontWeight: 600,
+        color: 'white',
+        letterSpacing: '-0.10em'
+    },
+    download: {
+        width: '12em',
+        height: '100px',
+        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+            marginTop: '12em',
+          },
+        textAlign: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    downloadButton: {
+        borderRadius: '50%',
+        padding: '15px',
+        // animation: `${bounce} 2s infinite`
+    },
+    CVicon: {
+        fontSize: '50px',
+        fontWeight: '800',
+    },
+    link: {
+        textDecoration: 'none',
+        color: '#A100FF'
+    }
+}))
+
+// const webkitBounce = keyframes`
+//     0%, 20%, 50%, 80%, 100% {
+//         -webkit-transform: translateY(0);
+//         transform: translateY(0); 
+//     }
+//     10% {
+//         -webkit-transform: translateY(-1rem);
+//         transform: translateY(-1rem);
+//     }`
+
+// const bounce = keyframes`
+//     0%, 20%, 50%, 80%, 100% {
+//         -webkit-transform: translateY(0);
+//         transform: translateY(0); 
+//     }
+//     10% {
+//         -webkit-transform: translateY(-1rem);
+//         transform: translateY(-1rem); 
+//     }`
