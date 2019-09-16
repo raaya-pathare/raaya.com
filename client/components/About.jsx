@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CV from '../files/cv.pdf'
-// import Cursor from './Cursor'
 import Typing from 'react-typing-animation'
 import { Typography, Slide, Grid, Button, Icon, Tooltip, Fade } from '@material-ui/core'
 import { AboutStyles } from '../style/muiStyles'
@@ -9,18 +8,6 @@ import styled, { keyframes } from 'styled-components'
 
 const About = (props) => {
     const classes = AboutStyles(props)
-
-    // const CursorSpan = styled.span`
-    // font-weight: 600
-    // color: white
-    // font-size: 280px
-    // @media (min-width: 200px):{
-    //     color: black
-    // }`
-
-    // @media (max-width: 768px) {
-    //     flex-direction: column;
-    //   }
 
     return (
             <Grid container className={classes.background}>
