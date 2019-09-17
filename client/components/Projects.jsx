@@ -23,7 +23,7 @@ const Projects = (props) => {
                     
                 </Grid >
                 <Grid item className={classes.WBinfo}>
-
+                    
                 </Grid >
             </Grid>
         </Grid>

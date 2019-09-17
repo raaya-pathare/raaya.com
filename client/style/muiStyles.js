@@ -384,6 +384,12 @@ export const ProjectsStyles = makeStyles(theme => ({
     WBphoto: {
         justifySelf: 'flex-start',
         backgroundImage: `url(${image3})`,
+        opacity: '0.5',
+        transition: 'all 1s',
+        '&:hover': {
+            opacity: '1',
+            transform: 'scale(1.05)'
+        },
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%',
         backgroundPosition: 'center bottom',
