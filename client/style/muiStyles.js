@@ -344,11 +344,12 @@ export const ProjectsStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
         justifyContent: 'center',
+        backgroundColor: 'white'
     },
     headingContainer: {
-        marginTop: '20em',
-        ['@media only screen and (orientation: landscape)']: {
-            marginTop: '12em'
+        marginTop: '15em',
+        ['@media only screen and (orientation: portrait)']: {
+            marginTop: '25em'
         },
         width: '70vw',
         [theme.breakpoints.down('md')]: {
@@ -356,55 +357,29 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
     },
     heading: {
-        fontFamily: 'Hammersmith One, sans-serif',
-        fontSize: '12em',
+        fontFamily: 'Sorts Mill Goudy, serif',
+        fontSize: '13em',
+        fontWeight: '800',
         color: '#A100FF',
         letterSpacing: '-0.10em',
         textAlign: 'center',
         lineHeight: '0.7em',
-        marginBottom: '0.8em',
+        marginBottom: '0.4em',
     },
-    // WBContainer: {
-    //     display: 'flex',
-    //     justifySelf: 'center',
-    //     alignItems: 'flex-end',
-    //     width: '95vw',
-    //     height: '90vh',
-    //     ['@media only screen and (orientation: portrait)']: {
-    //         height: '40vh'
-    //     },
-    // },
-    // WBphoto: {
-    //     backgroundImage: `url(${image3})`,
-    //     // ['@media only screen and (orientation: landscape)']: {
-    //     //     justifySelf: 'flex-start',
-    //     // },
-    //     // backgroundPosition: 'center bottom',
-    //     // backgroundSize: 'cover',
-    //     height: '90%',
-    //     width: '70%',
-    //     ['@media only screen and (orientation: portrait)']: {
-    //         height: '100%',
-    //         width: '100%',
-    //         backgroundSize: 'cover',
-    //         backgroundPosition: 'center bottom'
-    //     },
-    // },
     WBContainer: {
         display: 'flex',
         justifySelf: 'center',
         width: '95vw',
         height: '90vh',
         ['@media only screen and (orientation: portrait)']: {
-            height: '60vh',
+            height: '65vh',
         },
         [theme.breakpoints.down('md')]: {
             height: '90vw'
         },
         ['@media only screen and (orientation: landscape)']: {
-            height: '45vw',
+            height: '50vw',
         },
-        // border: '2px solid green'
     },
     WBphoto: {
         justifySelf: 'flex-start',
@@ -412,12 +387,28 @@ export const ProjectsStyles = makeStyles(theme => ({
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%',
         backgroundPosition: 'center bottom',
-        // border: '2px solid red',
-        width: '70%',
+        width: '80%',
         ['@media only screen and (orientation: portrait)']: {
             height: '70%',
             width: '100%'
         },
+    },
+    WBinfo: {
+        backgroundColor: '#333',
+        justifySelf: 'flex-end',
+        ['@media only screen and (orientation: portrait)']: {
+            alignSelf: 'flex-end',
+            justifySelf: 'center',
+            width: '65%',
+            height: '30%',
+            transform: 'translate(165px, -200px)'
+        },
+        width: '20%',
+        height: '70%',
+        transform: 'translate(-200px, 120px)',
+        ['@media only screen and (orientation: landscape)']: {
+            transform: 'translate(-200px, 70px)'
+        }
     }
 }))
 
