@@ -331,3 +331,29 @@ export const AboutStyles = makeStyles(theme => ({
         color: '#A100FF'
     }
 }))
+
+export const ProjectsStyles = makeStyles(theme => ({
+    root: {
+        display: 'flex',
+        justifyContent: 'center'
+    },
+    headingContainer: {
+        marginTop: '20em',
+        ['@media only screen and (orientation: landscape)']: {
+            marginTop: '12em'
+        },
+        width: '70vw',
+        [theme.breakpoints.down('md')]: {
+            width: '90vw'
+        },
+    },
+    heading: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '12em',
+        color: '#A100FF',
+        letterSpacing: '-0.10em',
+        textAlign: 'center',
+        lineHeight: '0.7em'
+    }
+}))
+
