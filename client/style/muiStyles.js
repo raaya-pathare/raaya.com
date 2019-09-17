@@ -4,6 +4,7 @@ import { createMuiTheme } from '@material-ui/core/styles'
 
 import image from '../images/background.jpg'
 import image2 from '../images/mountain.jpg'
+import image3 from '../images/watchbetter.jpg'
 
 
 export const theme = createMuiTheme({
@@ -21,6 +22,13 @@ export const theme = createMuiTheme({
     },
     spacing: 8,
     breakpoints: {
+        keys: {
+            0: "xs",
+            1: "sm",
+            2: "md",
+            3: "lg",
+            4: "xl",
+        },
         values: {
             xs: 0,
             sm: 600,
@@ -49,9 +57,9 @@ export const homeStyles = makeStyles(theme => ({
     allTextBox: {
         position: 'absolute',
         top: '13%',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+        [theme.breakpoints.down('md')]: {
             top: '20%'
-          },
+        },
         left: '5%',
         display: 'flex',
         flexDirection: 'column',
@@ -60,7 +68,7 @@ export const homeStyles = makeStyles(theme => ({
     },
     helloIm: {
         fontSize: '200px',
-        [theme.breakpoints.down('md' )]: {
+        [theme.breakpoints.down('md')]: {
             fontSize: '180px'
         },
         ['@media only screen and (orientation: landscape)']: {
@@ -335,7 +343,7 @@ export const AboutStyles = makeStyles(theme => ({
 export const ProjectsStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     headingContainer: {
         marginTop: '20em',
@@ -353,7 +361,63 @@ export const ProjectsStyles = makeStyles(theme => ({
         color: '#A100FF',
         letterSpacing: '-0.10em',
         textAlign: 'center',
-        lineHeight: '0.7em'
+        lineHeight: '0.7em',
+        marginBottom: '0.8em',
+    },
+    // WBContainer: {
+    //     display: 'flex',
+    //     justifySelf: 'center',
+    //     alignItems: 'flex-end',
+    //     width: '95vw',
+    //     height: '90vh',
+    //     ['@media only screen and (orientation: portrait)']: {
+    //         height: '40vh'
+    //     },
+    // },
+    // WBphoto: {
+    //     backgroundImage: `url(${image3})`,
+    //     // ['@media only screen and (orientation: landscape)']: {
+    //     //     justifySelf: 'flex-start',
+    //     // },
+    //     // backgroundPosition: 'center bottom',
+    //     // backgroundSize: 'cover',
+    //     height: '90%',
+    //     width: '70%',
+    //     ['@media only screen and (orientation: portrait)']: {
+    //         height: '100%',
+    //         width: '100%',
+    //         backgroundSize: 'cover',
+    //         backgroundPosition: 'center bottom'
+    //     },
+    // },
+    WBContainer: {
+        display: 'flex',
+        justifySelf: 'center',
+        width: '95vw',
+        height: '90vh',
+        ['@media only screen and (orientation: portrait)']: {
+            height: '60vh',
+        },
+        [theme.breakpoints.down('md')]: {
+            height: '90vw'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            height: '45vw',
+        },
+        // border: '2px solid green'
+    },
+    WBphoto: {
+        justifySelf: 'flex-start',
+        backgroundImage: `url(${image3})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% 100%',
+        backgroundPosition: 'center bottom',
+        // border: '2px solid red',
+        width: '70%',
+        ['@media only screen and (orientation: portrait)']: {
+            height: '70%',
+            width: '100%'
+        },
     }
 }))
 

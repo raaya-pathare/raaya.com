@@ -1,6 +1,5 @@
 import React from 'react'
-import { Grid, Typography } from '@material-ui/core'
-import Typist from 'react-typist'
+import { Grid, Typography, Box } from '@material-ui/core'
 import Typing from 'react-typing-animation'
 
 
@@ -17,11 +16,15 @@ const Projects = (props) => {
                     speed={90}>
                         selected work.
                     </Typing>
-                    {/* <Typist 
-                    cursor={{ hideWhenDone: true, hideWhenDoneDelay: 200 }}>
-                        selected work.
-                    </Typist> */}
                 </Typography>
+            </Grid>
+            <Grid container className={classes.WBContainer}>
+                <Grid item className={classes.WBphoto}>
+                    
+                </Grid >
+                <Grid item className={classes.WBinfo}>
+
+                </Grid >
             </Grid>
         </Grid>
     )

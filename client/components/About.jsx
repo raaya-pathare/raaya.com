@@ -4,7 +4,6 @@ import CV from '../files/cv.pdf'
 import Typing from 'react-typing-animation'
 import { Typography, Slide, Grid, Button, Icon, Tooltip, Fade } from '@material-ui/core'
 import { AboutStyles } from '../style/muiStyles'
-import styled, { keyframes } from 'styled-components'
 
 const About = (props) => {
     const classes = AboutStyles(props)
