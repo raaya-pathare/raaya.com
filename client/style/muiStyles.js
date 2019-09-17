@@ -384,7 +384,9 @@ export const ProjectsStyles = makeStyles(theme => ({
     WBphoto: {
         justifySelf: 'flex-start',
         backgroundImage: `url(${image3})`,
-        opacity: '0.5',
+        [theme.breakpoints.up('lg')]: {
+            opacity: '0.7',
+        },
         transition: 'all 1s',
         '&:hover': {
             opacity: '1',
@@ -400,7 +402,7 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
     },
     WBinfo: {
-        backgroundColor: '#333',
+        backgroundColor: 'white',
         justifySelf: 'flex-end',
         ['@media only screen and (orientation: portrait)']: {
             alignSelf: 'flex-end',
@@ -411,10 +413,35 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
         width: '20%',
         height: '70%',
-        transform: 'translate(-200px, 120px)',
-        ['@media only screen and (orientation: landscape)']: {
-            transform: 'translate(-200px, 70px)'
-        }
+        [theme.breakpoints.up('lg')]: {
+            transform: 'translate(-200px, 130px)'
+        },
+        padding: '30px'
+    },
+    title: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontWeight: '800',
+        fontSize: '3em',
+        textAlign: 'center',
+        letterSpacing: '-0.08em',
+        lineHeight: '1em'
+    },
+    subheading: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontWeight: '600',
+        textAlign: 'center',
+        fontSize: '1.3em',
+    },
+    bodytext: {
+        fontFamily: 'Sorts Mill Goudy, serif',
+        fontSize: '1em',
+        textAlign: 'center'
+    },
+    bodytext2: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontWeight: '600',
+        textAlign: 'center',
+        fontSize: '1.2em',
     }
 }))
 
