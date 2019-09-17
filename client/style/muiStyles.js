@@ -387,8 +387,8 @@ export const ProjectsStyles = makeStyles(theme => ({
         [theme.breakpoints.up('lg')]: {
             opacity: '0.7',
         },
-        transition: 'all 1s',
         '&:hover': {
+            transition: 'all 1s',
             opacity: '1',
             transform: 'scale(1.05)'
         },
@@ -396,6 +396,9 @@ export const ProjectsStyles = makeStyles(theme => ({
         backgroundSize: '100% 100%',
         backgroundPosition: 'center bottom',
         width: '80%',
+        [theme.breakpoints.down('md')]: {
+            width: '75%'
+        },
         ['@media only screen and (orientation: portrait)']: {
             height: '70%',
             width: '100%'
@@ -404,17 +407,24 @@ export const ProjectsStyles = makeStyles(theme => ({
     WBinfo: {
         backgroundColor: 'white',
         justifySelf: 'flex-end',
+        borderRadius: '1%',
         ['@media only screen and (orientation: portrait)']: {
             alignSelf: 'flex-end',
             justifySelf: 'center',
             width: '65%',
-            height: '30%',
+            height: '35%',
             transform: 'translate(165px, -200px)'
         },
         width: '20%',
         height: '70%',
         [theme.breakpoints.up('lg')]: {
-            transform: 'translate(-200px, 130px)'
+            transform: 'translate(-200px, 170px)',
+            height: '57%'
+        },
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            overflow: 'scroll',
+            width: '25%',
+            transform: 'translate(-100px, 70px)'
         },
         padding: '30px'
     },
@@ -431,16 +441,25 @@ export const ProjectsStyles = makeStyles(theme => ({
         fontWeight: '600',
         textAlign: 'center',
         fontSize: '1.3em',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '2em'
+        },
     },
     bodytext: {
         fontFamily: 'Sorts Mill Goudy, serif',
         fontSize: '1em',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '1.5em'
+        },
         textAlign: 'center'
     },
     bodytext2: {
         fontFamily: 'Hammersmith One, sans-serif',
         fontWeight: '600',
         textAlign: 'center',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '1.8em'
+        },
         fontSize: '1.2em',
     }
 }))
