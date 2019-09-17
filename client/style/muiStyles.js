@@ -5,7 +5,7 @@ import { createMuiTheme } from '@material-ui/core/styles'
 import image from '../images/background.jpg'
 import image2 from '../images/mountain.jpg'
 import image3 from '../images/watchbetter.jpg'
-
+import image4 from '../images/untied.jpg'
 
 export const theme = createMuiTheme({
     palette: {
@@ -368,9 +368,9 @@ export const ProjectsStyles = makeStyles(theme => ({
     },
     WBContainer: {
         display: 'flex',
-        justifySelf: 'center',
         width: '95vw',
         height: '90vh',
+        marginBottom: '12vw',
         ['@media only screen and (orientation: portrait)']: {
             height: '65vh',
         },
@@ -382,7 +382,6 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
     },
     WBphoto: {
-        justifySelf: 'flex-start',
         backgroundImage: `url(${image3})`,
         [theme.breakpoints.up('lg')]: {
             opacity: '0.7',
@@ -406,7 +405,6 @@ export const ProjectsStyles = makeStyles(theme => ({
     },
     WBinfo: {
         backgroundColor: 'white',
-        justifySelf: 'flex-end',
         borderRadius: '1%',
         ['@media only screen and (orientation: portrait)']: {
             alignSelf: 'flex-end',
@@ -461,6 +459,48 @@ export const ProjectsStyles = makeStyles(theme => ({
             fontSize: '1.8em'
         },
         fontSize: '1.2em',
+    },
+    untiedContainer: {
+        display: 'flex',
+        border: '2px solid red',
+        width: '95vw',
+        height: '90vh',
+        ['@media only screen and (orientation: portrait)']: {
+            height: '65vh',
+        },
+        [theme.breakpoints.down('md')]: {
+            height: '90vw'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            height: '50vw',
+        },
+    },
+    untiedPhoto: {
+        border: '2px solid green',
+        width: '80%',
+        height: '95%',
+        [theme.breakpoints.down('lg')]: {
+            alignSelf: 'center',
+        },
+        backgroundImage: `url(${image4})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '93% 93%',
+        backgroundPosition: 'center bottom',
+        [theme.breakpoints.down('md')]: {
+            width: '75%'
+        },
+        ['@media only screen and (orientation: portrait)']: {
+            height: '70%',
+            width: '100%'
+        },
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            height: '90%',
+            backgroundPosition: 'center bottom'
+        },
+    },
+    untiedInfo: {
+        border: '2px solid blue',
+        width: '20%'
     }
 }))
 
