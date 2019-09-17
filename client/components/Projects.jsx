@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Typography, Box } from '@material-ui/core'
+import { Grid, Typography, Slide } from '@material-ui/core'
 import Typing from 'react-typing-animation'
 
 
@@ -18,6 +18,7 @@ const Projects = (props) => {
                     </Typing>
                 </Typography>
             </Grid>
+            <Slide direction="up" in={true} timeout={1300} mountOnEnter unmountOnExit>
             <Grid container className={classes.WBContainer}>
                 <Grid item className={classes.WBphoto}>
                     
@@ -40,6 +41,7 @@ const Projects = (props) => {
                     </Typography>
                 </Grid >
             </Grid>
+            </Slide>
         </Grid>
     )
 }

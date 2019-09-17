@@ -15,7 +15,7 @@ const About = (props) => {
                 className={classes.content}
                 >
                     <Grid item className={classes.aboutTextContainer}>
-                        <Slide in={true} direction="right" timeout={1300} mountOnEnter unmountOnExit>
+                        <Slide in={true} direction="right" timeout={1600} mountOnEnter unmountOnExit>
                         <Typography className={classes.aboutText}>
                             "I'm passionate about well designed technology - if you are too, we'll get along.
                             Web development allows me to be my most creative while also satisfying my desire to learn.
