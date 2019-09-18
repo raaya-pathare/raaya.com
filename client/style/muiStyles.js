@@ -6,6 +6,7 @@ import image from '../images/background.jpg'
 import image2 from '../images/mountain.jpg'
 import image3 from '../images/watchbetter.jpg'
 import image4 from '../images/untied.jpg'
+import image5 from '../images/aspire.jpg'
 
 export const theme = createMuiTheme({
     palette: {
@@ -478,8 +479,10 @@ export const ProjectsStyles = makeStyles(theme => ({
         display: 'flex',
         width: '95vw',
         height: '90vh',
+        marginBottom: '22vh',
         ['@media only screen and (orientation: portrait)']: {
             height: '65vh',
+            marginBottom: '12vh'
         },
         [theme.breakpoints.down('md')]: {
             height: '90vw'
@@ -540,6 +543,42 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
         [`${theme.breakpoints.down('md')} and (orientation: portrait)`]: {
             transform: 'translateY(-40vw)',
+        },
+    },
+    aspireContainer: {
+        display: 'flex',
+        width: '55vw',
+        height: '90vh',
+        ['@media only screen and (orientation: portrait)']: {
+            height: '65vh',
+            width: '90vw'
+        },
+        [theme.breakpoints.down('md')]: {
+            height: '90vw'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            height: '50vw',
+        },
+    },
+    aspirePhoto: {
+        backgroundImage: `url(${image5})`,
+        [theme.breakpoints.up('lg')]: {
+            opacity: '0.7',
+            '&:hover': {
+                transition: 'all 1s',
+                opacity: '1',
+                transform: 'scale(1.05)'
+            },
+        },
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% 100%',
+        backgroundPosition: 'center bottom',
+        width: '52%',
+        // [theme.breakpoints.down('md')]: {
+        //     width: '75%'
+        // },
+        ['@media only screen and (orientation: portrait)']: {
+            width: '57%'
         },
     }
 }))
