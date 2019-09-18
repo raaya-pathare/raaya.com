@@ -370,7 +370,7 @@ export const ProjectsStyles = makeStyles(theme => ({
         display: 'flex',
         width: '95vw',
         height: '90vh',
-        marginBottom: '12vw',
+        marginBottom: '12vh',
         ['@media only screen and (orientation: portrait)']: {
             height: '65vh',
         },
@@ -404,8 +404,8 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
     },
     WBinfo: {
-        backgroundColor: 'white',
         borderRadius: '1%',
+        backgroundColor: 'white',
         ['@media only screen and (orientation: portrait)']: {
             alignSelf: 'flex-end',
             justifySelf: 'center',
@@ -460,9 +460,17 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
         fontSize: '1.2em',
     },
+    bodytext3: {
+        fontFamily: 'Sorts Mill Goudy, serif',
+        fontSize: '1em',
+        fontWeight: '1000',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '1.5em'
+        },
+        textAlign: 'center'
+    },
     untiedContainer: {
         display: 'flex',
-        border: '2px solid red',
         width: '95vw',
         height: '90vh',
         ['@media only screen and (orientation: portrait)']: {
@@ -475,8 +483,29 @@ export const ProjectsStyles = makeStyles(theme => ({
             height: '50vw',
         },
     },
+    untiedInfo: {
+        borderRadius: '1%',
+        zIndex: '1',
+        backgroundColor: 'white',
+        ['@media only screen and (orientation: portrait)']: {
+            width: '65%',
+            height: '35%',
+            transform: 'translate(165px, 450px)'
+        },
+        width: '20%',
+        height: '70%',
+        [theme.breakpoints.up('lg')]: {
+            transform: 'translate(140px, 200px)',
+            height: '57%'
+        },
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            overflow: 'scroll',
+            width: '25%',
+            transform: 'translate(80px, 90px)'
+        },
+        padding: '30px'
+    },
     untiedPhoto: {
-        border: '2px solid green',
         width: '80%',
         height: '95%',
         [theme.breakpoints.down('lg')]: {
@@ -495,12 +524,10 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
         [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
             height: '90%',
-            backgroundPosition: 'center bottom'
         },
-    },
-    untiedInfo: {
-        border: '2px solid blue',
-        width: '20%'
+        [`${theme.breakpoints.down('md')} and (orientation: portrait)`]: {
+            transform: 'translateY(-25vh)'
+        },
     }
 }))
 

@@ -21,9 +21,6 @@ const Projects = (props) => {
                 </Typography>
             </Grid>
                 <WB />
-                <br />
-                <br />
-                <br />
                 <Untied />
         </Grid>
     )
