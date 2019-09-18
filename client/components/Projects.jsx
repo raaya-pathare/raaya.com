@@ -15,15 +15,44 @@ const Projects = (props) => {
             <Grid item className={classes.headingContainer}>
                 <Typography className={classes.heading}>
                     <Typing
-                    hideCursor={true}
-                    speed={90}>
+                        hideCursor={true}
+                        speed={90}>
                         selected work.
                     </Typing>
                 </Typography>
             </Grid>
-                <WB />
-                <Untied />
-                <Aspire />
+            <Grid item className={classes.dateContainer1}>
+                <Slide direction="left" in={true} timeout={1300} mountOnEnter unmountOnExit>
+                    <Typography className={classes.date1}>
+                        <span style={{fontFamily: 'Sorts Mill Goudy, serif'}}>001.</span>
+                        <br/>
+                        2019
+                    </Typography>
+                </Slide>
+            </Grid>
+            <WB />
+            <Grid item className={classes.dateContainer2}>
+                <Slide direction="right" in={true} timeout={1300} mountOnEnter unmountOnExit>
+                    <Typography className={classes.date2}>
+                        <span style={{fontFamily: 'Sorts Mill Goudy, serif'}}>002.</span>
+                        <br/>
+                        2018
+                        <br/>
+                        - 2019
+                    </Typography>
+                </Slide>
+            </Grid>
+            <Untied />
+            <Grid item className={classes.dateContainer3}>
+                <Slide direction="left" in={true} timeout={1300} mountOnEnter unmountOnExit>
+                    <Typography className={classes.date3}>
+                        <span style={{fontFamily: 'Sorts Mill Goudy, serif'}}>003.  </span>
+                        <br/>
+                        2019
+                    </Typography>
+                </Slide>
+            </Grid>
+            <Aspire />
         </Grid>
     )
 }

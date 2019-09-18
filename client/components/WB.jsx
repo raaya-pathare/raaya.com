@@ -24,7 +24,7 @@ const WB = (props) => {
                             With watch better, users can browse a vast list of films, filtering through five different diversity tests. Users can also search for and receive information on films, test their favourites to see how they fare against our tests and create an account, allowing them to save their favourites on a watchlist for the next login.
                     </Typography>
                         <br />
-                        <Typography className={classes.bodytext2}>
+                    <Typography className={classes.bodytext2}>
                             ui design / ux design / front end development
                     </Typography>
                     </Grid >

@@ -413,7 +413,7 @@ export const ProjectsStyles = makeStyles(theme => ({
             overflow: 'scroll',
             transform: 'translate(165px, -200px)'
         },
-        width: '20%',
+        width: '19%',
         height: '70%',
         [theme.breakpoints.up('lg')]: {
             transform: 'translate(-200px, 170px)',
@@ -425,6 +425,65 @@ export const ProjectsStyles = makeStyles(theme => ({
             transform: 'translate(-100px, 70px)'
         },
         padding: '30px'
+    },
+    dateContainer1: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        width: '100vw',
+        height: '2px',
+        transform: 'translateY(12em)',
+        [theme.breakpoints.down('md')]: {
+            transform: 'translateY(4.5em)',
+        }
+    },
+    date1: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '1.2em',
+        color: '#A100FF',
+        marginRight: '10vw',
+        [theme.breakpoints.down('md')]: {
+            marginRight: '7vw'
+        }
+    },
+    dateContainer2: {
+        display: 'flex',
+        zIndex: '5',
+        justifyContent: 'flex-start',
+        width: '100vw',
+        height: '2px',
+        transform: 'translateY(14em)',
+        [theme.breakpoints.down('md')]: {
+            transform: 'translateY(6em)',
+        }
+    },
+    date2: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '1.2em',
+        color: '#A100FF',
+        textAlign: 'right',
+        marginLeft: '4vw'
+    },
+    dateContainer3: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        width: '100vw',
+        height: '2px', 
+        transform: 'translateY(16.5em)',
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            transform: 'translateY(6.5em)'
+        },
+    },
+    date3: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '1.2em',
+        color: '#A100FF',
+        marginRight: '19vw',
+        [theme.breakpoints.down('md')]: {
+            marginRight: '9vw'
+        },
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            marginRight: '14.5vw'
+        },
     },
     title: {
         fontFamily: 'Hammersmith One, sans-serif',
