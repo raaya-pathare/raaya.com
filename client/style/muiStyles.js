@@ -624,17 +624,17 @@ export const ProjectsStyles = makeStyles(theme => ({
         [theme.breakpoints.up('lg')]: {
             opacity: '0.7',
             '&:hover': {
-                transition: 'all 1s',
+                transition: '1s',
                 opacity: '1',
                 transform: 'scale(1.09)'
             },
         },
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 95%',
+        backgroundSize: '30em 53em',
         [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
             backgroundSize: '77% 95%'
         },
-        backgroundPosition: 'center bottom',
+        backgroundPosition: 'center center',
         width: '45%',
         ['@media only screen and (orientation: portrait)']: {
             width: '57%'
