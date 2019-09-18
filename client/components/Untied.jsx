@@ -5,6 +5,7 @@ import { ProjectsStyles } from '../style/muiStyles';
 const Untied = (props) => {
     const classes = ProjectsStyles(props)
     return (
+        <Slide direction="up" in={true} timeout={1600} mountOnEnter unmountOnExit>
         <Grid container className={classes.untiedContainer}>
             <Grid item className={classes.untiedInfo}>
                 <Typography className={classes.title}>
@@ -27,6 +28,7 @@ const Untied = (props) => {
 
             </Grid>
         </Grid>
+        </Slide>
     )
 }
 

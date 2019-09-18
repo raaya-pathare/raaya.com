@@ -385,11 +385,11 @@ export const ProjectsStyles = makeStyles(theme => ({
         backgroundImage: `url(${image3})`,
         [theme.breakpoints.up('lg')]: {
             opacity: '0.7',
-        },
-        '&:hover': {
-            transition: 'all 1s',
-            opacity: '1',
-            transform: 'scale(1.05)'
+            '&:hover': {
+                transition: 'all 1s',
+                opacity: '1',
+                transform: 'scale(1.05)'
+            },
         },
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%',
@@ -404,13 +404,13 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
     },
     WBinfo: {
-        borderRadius: '1%',
-        backgroundColor: 'white',
+        backgroundColor: '#1f1f1f',
         ['@media only screen and (orientation: portrait)']: {
             alignSelf: 'flex-end',
             justifySelf: 'center',
             width: '65%',
             height: '35%',
+            overflow: 'scroll',
             transform: 'translate(165px, -200px)'
         },
         width: '20%',
@@ -430,6 +430,7 @@ export const ProjectsStyles = makeStyles(theme => ({
         fontFamily: 'Hammersmith One, sans-serif',
         fontWeight: '800',
         fontSize: '3em',
+        color: 'white',
         textAlign: 'center',
         letterSpacing: '-0.08em',
         lineHeight: '1em'
@@ -437,6 +438,7 @@ export const ProjectsStyles = makeStyles(theme => ({
     subheading: {
         fontFamily: 'Hammersmith One, sans-serif',
         fontWeight: '600',
+        color: 'white',
         textAlign: 'center',
         fontSize: '1.3em',
         ['@media only screen and (orientation: portrait)']: {
@@ -446,6 +448,7 @@ export const ProjectsStyles = makeStyles(theme => ({
     bodytext: {
         fontFamily: 'Sorts Mill Goudy, serif',
         fontSize: '1em',
+        color: 'white',
         ['@media only screen and (orientation: portrait)']: {
             fontSize: '1.5em'
         },
@@ -454,6 +457,7 @@ export const ProjectsStyles = makeStyles(theme => ({
     bodytext2: {
         fontFamily: 'Hammersmith One, sans-serif',
         fontWeight: '600',
+        color: 'white',
         textAlign: 'center',
         ['@media only screen and (orientation: portrait)']: {
             fontSize: '1.8em'
@@ -463,6 +467,7 @@ export const ProjectsStyles = makeStyles(theme => ({
     bodytext3: {
         fontFamily: 'Sorts Mill Goudy, serif',
         fontSize: '1em',
+        color: 'white',
         fontWeight: '1000',
         ['@media only screen and (orientation: portrait)']: {
             fontSize: '1.5em'
@@ -484,13 +489,13 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
     },
     untiedInfo: {
-        borderRadius: '1%',
         zIndex: '1',
-        backgroundColor: 'white',
+        backgroundColor: '#1f1f1f',
         ['@media only screen and (orientation: portrait)']: {
             width: '65%',
             height: '35%',
-            transform: 'translate(165px, 450px)'
+            transform: 'translate(165px, 450px)',
+            overflow: 'scroll'
         },
         width: '20%',
         height: '70%',
@@ -511,6 +516,14 @@ export const ProjectsStyles = makeStyles(theme => ({
         [theme.breakpoints.down('lg')]: {
             alignSelf: 'center',
         },
+        [theme.breakpoints.up('lg')]: {
+            opacity: '0.7',
+            '&:hover': {
+                transition: 'all 1s',
+                opacity: '1',
+                transform: 'scale(1.05)'
+            },
+        },
         backgroundImage: `url(${image4})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: '93% 93%',
@@ -526,7 +539,7 @@ export const ProjectsStyles = makeStyles(theme => ({
             height: '90%',
         },
         [`${theme.breakpoints.down('md')} and (orientation: portrait)`]: {
-            transform: 'translateY(-25vh)'
+            transform: 'translateY(-40vw)',
         },
     }
 }))
