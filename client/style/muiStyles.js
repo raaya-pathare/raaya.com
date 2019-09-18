@@ -567,7 +567,7 @@ export const ProjectsStyles = makeStyles(theme => ({
             '&:hover': {
                 transition: 'all 1s',
                 opacity: '1',
-                transform: 'scale(1.05)'
+                transform: 'scale(1.09)'
             },
         },
         backgroundRepeat: 'no-repeat',
