@@ -408,7 +408,6 @@ export const ProjectsStyles = makeStyles(theme => ({
         backgroundColor: '#1f1f1f',
         ['@media only screen and (orientation: portrait)']: {
             alignSelf: 'flex-end',
-            justifySelf: 'center',
             width: '65%',
             height: '35%',
             overflow: 'scroll',
@@ -547,7 +546,7 @@ export const ProjectsStyles = makeStyles(theme => ({
     },
     aspireContainer: {
         display: 'flex',
-        width: '55vw',
+        width: '60vw',
         height: '90vh',
         ['@media only screen and (orientation: portrait)']: {
             height: '65vh',
@@ -571,14 +570,26 @@ export const ProjectsStyles = makeStyles(theme => ({
             },
         },
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 100%',
+        backgroundSize: '100% 95%',
         backgroundPosition: 'center bottom',
-        width: '52%',
-        // [theme.breakpoints.down('md')]: {
-        //     width: '75%'
-        // },
+        width: '45%',
         ['@media only screen and (orientation: portrait)']: {
             width: '57%'
+        },
+    },
+    aspireInfo: {
+        backgroundColor: '#1f1f1f',
+        zIndex: '2',
+        width: '55%',
+        height: '50%',
+        padding: '30px',
+        alignSelf: 'center',
+        transform: 'translateX(-80px)',
+        ['@media only screen and (orientation: portrait)']: {
+            alignSelf: 'flex-end',
+            width: '43%',
+            height: '60%',
+            transform: 'translate(-100px, -160px)'
         },
     }
 }))
