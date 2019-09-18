@@ -586,7 +586,7 @@ export const ProjectsStyles = makeStyles(theme => ({
         zIndex: '2',
         width: '55%',
         height: '40%',
-        ['@media only screen and (orientation: landscape)']: {
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
             height: '60%',
             transform: 'translateX(-100px)',
         },

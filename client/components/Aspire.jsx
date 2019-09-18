@@ -6,6 +6,7 @@ import { ProjectsStyles } from '../style/muiStyles'
 const Aspire = (props) => {
     const classes = ProjectsStyles(props)
     return (
+        <Slide direction="up" in={true} timeout={1600} mountOnEnter unmountOnExit>
         <Grid container className={classes.aspireContainer}>
             <Grid item className={classes.aspirePhoto}>
             
@@ -28,6 +29,7 @@ const Aspire = (props) => {
                 </Typography>
             </Grid>
         </Grid>
+        </Slide>
     )
 }
 
