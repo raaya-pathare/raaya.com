@@ -228,6 +228,9 @@ export const NavStyles = makeStyles(theme => ({
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
             fontSize: '1.7em'
         },
+        [`${theme.breakpoints.down('md')} and (orientation: portrait)`]: {
+            fontSize: '1.5vh'
+        },
         ['@media only screen and (orientation: landscape)']: {
             fontSize: '1em'
         },
@@ -249,8 +252,8 @@ export const NavStyles = makeStyles(theme => ({
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
             fontSize: '1.7em'
         },
-        ['@media only screen and (orientation: landscape)']: {
-            fontSize: '1em'
+        [`${theme.breakpoints.down('md')} and (orientation: portrait)`]: {
+            fontSize: '1.5vh'
         },
         [theme.breakpoints.up('lg')]: { // eslint-disable-line no-useless-computed-key
             color: 'white'
