@@ -11,7 +11,21 @@ const Aspire = (props) => {
             
             </Grid>
             <Grid item className={classes.aspireInfo}>
-            
+                <Typography className={classes.title}>
+                    aspire.
+                </Typography>
+                <br />
+                <Typography className={classes.subheading}>
+                    Your dreams, in your pocket.
+                </Typography>
+                <br />
+                <Typography className={classes.bodytext}>
+                    <span className={classes.bodytext3}>In progress. </span>Aspire will allow the user to keep record, keep track of, tick off and share their bucket list goals with others as they move through life. Life gets in the way. Our goals are easy to forget, sometimes we need to be reminded to work towards them. 
+                </Typography>
+                <br />
+                <Typography className={classes.bodytext2}>
+                    ui design / ux design / front end development / back end development
+                </Typography>
             </Grid>
         </Grid>
     )

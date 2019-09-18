@@ -555,8 +555,9 @@ export const ProjectsStyles = makeStyles(theme => ({
         [theme.breakpoints.down('md')]: {
             height: '90vw'
         },
-        ['@media only screen and (orientation: landscape)']: {
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
             height: '50vw',
+            width: '80vw'
         },
     },
     aspirePhoto: {
@@ -571,6 +572,9 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 95%',
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            backgroundSize: '77% 95%'
+        },
         backgroundPosition: 'center bottom',
         width: '45%',
         ['@media only screen and (orientation: portrait)']: {
@@ -581,8 +585,13 @@ export const ProjectsStyles = makeStyles(theme => ({
         backgroundColor: '#1f1f1f',
         zIndex: '2',
         width: '55%',
-        height: '50%',
+        height: '40%',
+        ['@media only screen and (orientation: landscape)']: {
+            height: '60%',
+            transform: 'translateX(-100px)',
+        },
         padding: '30px',
+        overflow: 'scroll',
         alignSelf: 'center',
         transform: 'translateX(-80px)',
         ['@media only screen and (orientation: portrait)']: {
