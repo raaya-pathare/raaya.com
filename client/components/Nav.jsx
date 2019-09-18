@@ -76,7 +76,7 @@ const Nav = (props) => {
                   style={{ transformOrigin: '0 0 0' }}
                   {...(pressed ? { timeout: 1500 } : {})}
                 >
-                  <Button onClick={handleClose} className={classes.menuItem}>Selected Projects</Button>
+                  <Button onClick={handleClose} className={classes.menuItem}><Link to="/projects" className={classes.link}>Selected Work</Link></Button>
                 </Grow>
                 <Grow
                   in={pressed}

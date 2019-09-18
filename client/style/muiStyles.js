@@ -176,12 +176,12 @@ export const NavStyles = makeStyles(theme => ({
     name: {
         color: 'black',
         fontFamily: 'Sorts Mill Goudy, serif',
-        fontSize: '18px',
+        marginTop: '0.5em',
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
             fontSize: '2em'
         },
         ['@media only screen and (orientation: landscape)']: {
-            fontSize: '1.5em'
+            fontSize: '1.3em'
         },
         textDecoration: 'none'
     },
