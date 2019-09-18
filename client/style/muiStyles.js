@@ -4,7 +4,9 @@ import { createMuiTheme } from '@material-ui/core/styles'
 
 import image from '../images/background.jpg'
 import image2 from '../images/mountain.jpg'
-
+import image3 from '../images/watchbetter.jpg'
+import image4 from '../images/untied.jpg'
+import image5 from '../images/aspire.jpg'
 
 export const theme = createMuiTheme({
     palette: {
@@ -21,6 +23,13 @@ export const theme = createMuiTheme({
     },
     spacing: 8,
     breakpoints: {
+        keys: {
+            0: "xs",
+            1: "sm",
+            2: "md",
+            3: "lg",
+            4: "xl",
+        },
         values: {
             xs: 0,
             sm: 600,
@@ -49,9 +58,9 @@ export const homeStyles = makeStyles(theme => ({
     allTextBox: {
         position: 'absolute',
         top: '13%',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+        [theme.breakpoints.down('md')]: {
             top: '20%'
-          },
+        },
         left: '5%',
         display: 'flex',
         flexDirection: 'column',
@@ -60,7 +69,7 @@ export const homeStyles = makeStyles(theme => ({
     },
     helloIm: {
         fontSize: '200px',
-        [theme.breakpoints.down('md' )]: {
+        [theme.breakpoints.down('md')]: {
             fontSize: '180px'
         },
         ['@media only screen and (orientation: landscape)']: {
@@ -331,3 +340,325 @@ export const AboutStyles = makeStyles(theme => ({
         color: '#A100FF'
     }
 }))
+
+export const ProjectsStyles = makeStyles(theme => ({
+    root: {
+        display: 'flex',
+        justifyContent: 'center',
+        backgroundColor: 'white'
+    },
+    headingContainer: {
+        marginTop: '15em',
+        ['@media only screen and (orientation: portrait)']: {
+            marginTop: '25em'
+        },
+        width: '70vw',
+        [theme.breakpoints.down('md')]: {
+            width: '90vw'
+        },
+    },
+    heading: {
+        fontFamily: 'Sorts Mill Goudy, serif',
+        fontSize: '13em',
+        fontWeight: '800',
+        color: '#A100FF',
+        letterSpacing: '-0.10em',
+        textAlign: 'center',
+        lineHeight: '0.7em',
+        marginBottom: '0.4em',
+    },
+    WBContainer: {
+        display: 'flex',
+        width: '95vw',
+        height: '90vh',
+        marginBottom: '12vh',
+        ['@media only screen and (orientation: portrait)']: {
+            height: '65vh',
+        },
+        [theme.breakpoints.down('md')]: {
+            height: '90vw'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            height: '50vw',
+        },
+    },
+    WBphoto: {
+        backgroundImage: `url(${image3})`,
+        [theme.breakpoints.up('lg')]: {
+            opacity: '0.7',
+            '&:hover': {
+                transition: 'all 1s',
+                opacity: '1',
+                transform: 'scale(1.05)'
+            },
+        },
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% 100%',
+        backgroundPosition: 'center bottom',
+        width: '80%',
+        [theme.breakpoints.down('md')]: {
+            width: '75%'
+        },
+        ['@media only screen and (orientation: portrait)']: {
+            height: '70%',
+            width: '100%'
+        },
+    },
+    WBinfo: {
+        backgroundColor: '#1f1f1f',
+        ['@media only screen and (orientation: portrait)']: {
+            alignSelf: 'flex-end',
+            width: '65%',
+            height: '35%',
+            overflow: 'scroll',
+            transform: 'translate(165px, -200px)'
+        },
+        width: '19%',
+        height: '70%',
+        [theme.breakpoints.up('lg')]: {
+            transform: 'translate(-200px, 170px)',
+            height: '57%'
+        },
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            overflow: 'scroll',
+            width: '25%',
+            transform: 'translate(-100px, 70px)'
+        },
+        padding: '30px'
+    },
+    dateContainer1: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        width: '100vw',
+        height: '2px',
+        transform: 'translateY(12em)',
+        [theme.breakpoints.down('md')]: {
+            transform: 'translateY(4.5em)',
+        }
+    },
+    date1: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '1.2em',
+        color: '#A100FF',
+        marginRight: '10vw',
+        [theme.breakpoints.down('md')]: {
+            marginRight: '7vw'
+        }
+    },
+    dateContainer2: {
+        display: 'flex',
+        zIndex: '5',
+        justifyContent: 'flex-start',
+        width: '100vw',
+        height: '2px',
+        transform: 'translateY(14em)',
+        [theme.breakpoints.down('md')]: {
+            transform: 'translateY(6em)',
+        }
+    },
+    date2: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '1.2em',
+        color: '#A100FF',
+        textAlign: 'right',
+        marginLeft: '4vw'
+    },
+    dateContainer3: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        width: '100vw',
+        height: '2px', 
+        transform: 'translateY(16.5em)',
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            transform: 'translateY(6.5em)'
+        },
+    },
+    date3: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '1.2em',
+        color: '#A100FF',
+        marginRight: '19vw',
+        [theme.breakpoints.down('md')]: {
+            marginRight: '9vw'
+        },
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            marginRight: '14.5vw'
+        },
+    },
+    title: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontWeight: '800',
+        fontSize: '3em',
+        color: 'white',
+        textAlign: 'center',
+        letterSpacing: '-0.08em',
+        lineHeight: '1em'
+    },
+    subheading: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontWeight: '600',
+        color: 'white',
+        textAlign: 'center',
+        fontSize: '1.3em',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '2em'
+        },
+    },
+    bodytext: {
+        fontFamily: 'Sorts Mill Goudy, serif',
+        fontSize: '1em',
+        color: 'white',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '1.5em'
+        },
+        textAlign: 'center'
+    },
+    bodytext2: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontWeight: '600',
+        color: 'white',
+        textAlign: 'center',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '1.8em'
+        },
+        fontSize: '1.2em',
+    },
+    bodytext3: {
+        fontFamily: 'Sorts Mill Goudy, serif',
+        fontSize: '1em',
+        color: 'white',
+        fontWeight: '1000',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '1.5em'
+        },
+        textAlign: 'center'
+    },
+    untiedContainer: {
+        display: 'flex',
+        width: '95vw',
+        height: '90vh',
+        marginBottom: '22vh',
+        ['@media only screen and (orientation: portrait)']: {
+            height: '65vh',
+            marginBottom: '12vh'
+        },
+        [theme.breakpoints.down('md')]: {
+            height: '90vw'
+        },
+        ['@media only screen and (orientation: landscape)']: {
+            height: '50vw',
+        },
+    },
+    untiedInfo: {
+        zIndex: '1',
+        backgroundColor: '#1f1f1f',
+        ['@media only screen and (orientation: portrait)']: {
+            width: '65%',
+            height: '35%',
+            transform: 'translate(165px, 450px)',
+            overflow: 'scroll'
+        },
+        width: '20%',
+        height: '70%',
+        [theme.breakpoints.up('lg')]: {
+            transform: 'translate(140px, 200px)',
+            height: '57%'
+        },
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            overflow: 'scroll',
+            width: '25%',
+            transform: 'translate(80px, 90px)'
+        },
+        padding: '30px'
+    },
+    untiedPhoto: {
+        width: '80%',
+        height: '95%',
+        [theme.breakpoints.down('lg')]: {
+            alignSelf: 'center',
+        },
+        [theme.breakpoints.up('lg')]: {
+            opacity: '0.7',
+            '&:hover': {
+                transition: 'all 1s',
+                opacity: '1',
+                transform: 'scale(1.05)'
+            },
+        },
+        backgroundImage: `url(${image4})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '93% 93%',
+        backgroundPosition: 'center bottom',
+        [theme.breakpoints.down('md')]: {
+            width: '75%'
+        },
+        ['@media only screen and (orientation: portrait)']: {
+            height: '70%',
+            width: '100%'
+        },
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            height: '90%',
+        },
+        [`${theme.breakpoints.down('md')} and (orientation: portrait)`]: {
+            transform: 'translateY(-40vw)',
+        },
+    },
+    aspireContainer: {
+        display: 'flex',
+        width: '60vw',
+        height: '90vh',
+        ['@media only screen and (orientation: portrait)']: {
+            height: '65vh',
+            width: '90vw'
+        },
+        [theme.breakpoints.down('md')]: {
+            height: '90vw'
+        },
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            height: '50vw',
+            width: '80vw'
+        },
+    },
+    aspirePhoto: {
+        backgroundImage: `url(${image5})`,
+        [theme.breakpoints.up('lg')]: {
+            opacity: '0.7',
+            '&:hover': {
+                transition: '1s',
+                opacity: '1',
+                transform: 'scale(1.09)'
+            },
+        },
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '30em 53em',
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            backgroundSize: '77% 95%'
+        },
+        backgroundPosition: 'center center',
+        width: '45%',
+        ['@media only screen and (orientation: portrait)']: {
+            width: '57%'
+        },
+    },
+    aspireInfo: {
+        backgroundColor: '#1f1f1f',
+        zIndex: '2',
+        width: '55%',
+        height: '40%',
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            height: '60%',
+            transform: 'translateX(-100px)',
+        },
+        padding: '30px',
+        overflow: 'scroll',
+        alignSelf: 'center',
+        transform: 'translateX(-80px)',
+        ['@media only screen and (orientation: portrait)']: {
+            alignSelf: 'flex-end',
+            width: '43%',
+            height: '60%',
+            transform: 'translate(-100px, -160px)'
+        },
+    }
+}))
+
