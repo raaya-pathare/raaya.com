@@ -177,6 +177,10 @@ export const NavStyles = makeStyles(theme => ({
         color: 'black',
         fontFamily: 'Sorts Mill Goudy, serif',
         marginTop: '0.5em',
+        '&:hover': {
+            transition: '0.8s',
+            transform: 'scale(1.16)'
+        },
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
             fontSize: '2em'
         },
