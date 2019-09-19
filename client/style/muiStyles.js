@@ -138,15 +138,14 @@ export const homeStyles = makeStyles(theme => ({
         height: '50px',
         display: 'flex',
         width: '100vw',
-        marginLeft: '4vw',
-        marginBottom: '20px',
         [theme.breakpoints.down('md')]: {
             marginBottom: '80px',
             justifyContent: 'center'
         },
         ['@media only screen and (orientation: landscape)']: {
             marginBottom: '20px',
-            justifyContent: 'flex-start'
+            justifyContent: 'flex-end',
+            marginRight: '4vw'
         },
         alignSelf: 'flex-end',
     },
@@ -154,9 +153,9 @@ export const homeStyles = makeStyles(theme => ({
         height: '30px',
         width: '30px',
         [theme.breakpoints.down('md')]: {
-            height: '60px',
-            width: '60px',
-            marginRight: '10px',
+            height: '50px',
+            width: '50px',
+            marginRight: '15px',
         },
         ['@media only screen and (orientation: landscape)']: {
             height: '30px',
