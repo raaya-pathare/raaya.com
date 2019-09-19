@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, TextField, Button } from '@material-ui/core'
+import { Grid, TextField, Button, Typography } from '@material-ui/core'
 import * as emailjs from 'emailjs-com'
 
 class Contact extends React.Component {
@@ -9,7 +9,10 @@ class Contact extends React.Component {
         this.state = {
             name: '',
             email: '',
-            message: ''
+            message: '',
+            emailError: 'Incorrect email address format. Please check and enter again.',
+            confirmation: false,
+            sendingError: false
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -30,14 +33,26 @@ class Contact extends React.Component {
             to_name: 'raaya.pathare7@gmail.com',
             message_html: this.state.message
         }
+
+
         emailjs.send('gmail', 'portfolio_contact_form', templateParams, 'user_BakXnlA942EEymoG7yUrf')
             .then(res => {
                 console.log('SUCCESS!', res)
+                this.setState({
+                    confirmation: true,
+                    sendingError: false
+                })
+            }).catch(err => {
+                console.log('oops, something went wrong.', err)
+                this.setState({
+                    sendingError: true,
+                })
             })
+
         this.setState({
             name: '',
             email: '',
-            message: ''
+            message: '',
         })
     }
 
@@ -87,6 +102,14 @@ class Contact extends React.Component {
                         name="submit">
                         submit message
                         </Button>
+                        {this.state.confirmation && 
+                        <Typography>
+                            Message success!
+                        </Typography>}
+                        {this.state.sendingError &&
+                        <Typography>
+                            Unfortunately an error occurred. Please try again.
+                        </Typography>}
                         </form>
                 </Grid>
             </Grid>
