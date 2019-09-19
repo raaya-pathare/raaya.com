@@ -1,7 +1,6 @@
 import React from 'react'
 import { Grid, TextField, Button } from '@material-ui/core'
 import * as emailjs from 'emailjs-com'
-import 'jquery'
 
 class Contact extends React.Component {
 
