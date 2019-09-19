@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { NavStyles } from '../style/muiStyles'
-import { Container, Grow, Typography, Button, Menu, Icon, Box } from '@material-ui/core'
+import { Container, Grow, Typography, Button, Menu, Icon, Box, Slide } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles';
 
 const Nav = (props) => {
@@ -44,15 +44,17 @@ const Nav = (props) => {
     <>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Container maxWidth={false} className={classes.root}>
+        <Slide in={true} direction="right" timeout={1300}>
           <div>
             <Typography className={classes.name}><Link to="/" className={classes.nameLink}>raaya pathare</Link>
             </Typography>
           </div>
+        </Slide>
+        <Slide in={true} direction="right" timeout={1200}>
           <Box>
             <Button
               aria-controls="customized-menu"
               aria-haspopup="true"
-              className={classes.button}
               onClick={handleClick}>
               <Icon className={classes.icon}
               >menu</Icon>
@@ -90,11 +92,12 @@ const Nav = (props) => {
                   style={{ transformOrigin: '0 0 0' }}
                   {...(pressed ? { timeout: 500 } : {})}
                 >
-                  <Button onClick={handleClose} className={classes.menuItemContact}>Contact</Button>
+                  <Button onClick={handleClose} className={classes.menuItem}>Contact</Button>
                 </Grow>
               </Container>
             </StyledMenu>
           </Box>
+          </Slide>
         </Container>
       </div>
     </>

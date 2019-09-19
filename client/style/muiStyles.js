@@ -174,12 +174,11 @@ export const NavStyles = makeStyles(theme => ({
         position: 'fixed'
     },
     name: {
-        color: 'black',
         fontFamily: 'Sorts Mill Goudy, serif',
         marginTop: '0.5em',
         '&:hover': {
-            transition: '0.8s',
-            transform: 'scale(1.16)'
+            transition: '0.5s',
+            transform: 'scale(1.1)'
         },
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
             fontSize: '2em'
@@ -189,12 +188,9 @@ export const NavStyles = makeStyles(theme => ({
         },
         textDecoration: 'none'
     },
-    button: {
-        backgroundColor: '#FFFFFF1A'
-    },
     nameLink: {
         textDecoration: 'none',
-        color: '#A100FF'
+        color: 'black'
     },
     icon: {
         color: '#A100FF',
@@ -224,7 +220,7 @@ export const NavStyles = makeStyles(theme => ({
     },
     menuItem: {
         fontFamily: 'Montserrat, sans-serif',
-        transition: 'all 2s',
+        color: '#A100FF',
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
             fontSize: '1.7em'
         },
@@ -240,27 +236,11 @@ export const NavStyles = makeStyles(theme => ({
         }
     },
     link: {
+        color: '#A100FF',
         textDecoration: 'none',
-        color: 'black',
         '&:hover': {
-            color: '#A100FF',
-        }
-    },
-    menuItemContact: {
-        fontFamily: 'Montserrat, sans-serif',
-        transition: 'all 2s',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
-            fontSize: '1.7em'
-        },
-        [`${theme.breakpoints.down('md')} and (orientation: portrait)`]: {
-            fontSize: '1.5vh'
-        },
-        [theme.breakpoints.up('lg')]: { // eslint-disable-line no-useless-computed-key
-            color: 'white'
-        },
-        '&:hover': {
-            backgroundColor: 'transparent',
-            color: '#A100FF',
+            transition: '0.5s',
+            transform: 'scale(1.1)'
         }
     }
 }))
