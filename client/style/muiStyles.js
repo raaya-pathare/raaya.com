@@ -403,7 +403,8 @@ export const ProjectsStyles = makeStyles(theme => ({
         height: '70%',
         [theme.breakpoints.up('lg')]: {
             transform: 'translate(-200px, 170px)',
-            height: '57%'
+            height: '57%',
+            overflow: 'scroll'
         },
         [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
             overflow: 'scroll',
@@ -548,7 +549,8 @@ export const ProjectsStyles = makeStyles(theme => ({
         height: '70%',
         [theme.breakpoints.up('lg')]: {
             transform: 'translate(140px, 200px)',
-            height: '57%'
+            height: '57%',
+            overflow: 'scroll'
         },
         [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
             overflow: 'scroll',
