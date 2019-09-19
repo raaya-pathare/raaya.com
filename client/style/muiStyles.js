@@ -261,9 +261,13 @@ export const AboutStyles = makeStyles(theme => ({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-evenly',
-        marginTop: '8em',
+        height: '60vh',
+        marginTop: '5em',
         [theme.breakpoints.down('md')]: {
-            marginTop: '12em',
+            marginTop: '15vh',
+        },
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            height: '75vh'
         },
     },
     aboutTextContainer: {
