@@ -9,8 +9,9 @@ class Contact extends React.Component {
         this.state = {
             name: '',
             email: '',
+            confEmail: '',
             message: '',
-            emailError: 'Incorrect email address format. Please check and enter again.',
+            emailError: false,
             confirmation: false,
             sendingError: false
         }
@@ -25,6 +26,7 @@ class Contact extends React.Component {
         })
     }
 
+
     handleSubmit = (e) => {
         e.preventDefault()
         let templateParams = {
@@ -33,27 +35,32 @@ class Contact extends React.Component {
             to_name: 'raaya.pathare7@gmail.com',
             message_html: this.state.message
         }
-
-
-        emailjs.send('gmail', 'portfolio_contact_form', templateParams, 'user_BakXnlA942EEymoG7yUrf')
-            .then(res => {
-                console.log('SUCCESS!', res)
+            if (this.state.email !== this.state.confEmail) {
                 this.setState({
-                    confirmation: true,
-                    sendingError: false
+                    emailError: true
                 })
-            }).catch(err => {
-                console.log('oops, something went wrong.', err)
-                this.setState({
-                    sendingError: true,
+            } else {
+                emailjs.send('gmail', 'portfolio_contact_form', templateParams, 'user_BakXnlA942EEymoG7yUrf')
+                .then(res => {
+                    console.log('SUCCESS!', res)
+                    this.setState({
+                        confirmation: true,
+                        sendingError: false,
+                        emailError: false
+                    })
+                }).catch(err => {
+                    console.log('oops, something went wrong.', err)
+                    this.setState({
+                        sendingError: true,
+                    })
                 })
+            this.setState({
+                name: '',
+                email: '',
+                confEmail: '',
+                message: '',
             })
-
-        this.setState({
-            name: '',
-            email: '',
-            message: '',
-        })
+            }        
     }
 
     render() {
@@ -89,12 +96,25 @@ class Contact extends React.Component {
 
                         <TextField
                         required
+                        name="confEmail"
+                        value={this.state.confEmail}
+                        onChange={this.handleChange}
+                        label="Confirm email" />
+
+                        {this.state.emailError &&
+                        <Typography>
+                            Email addresses do not match. Please check and re-enter.
+                        </Typography>}
+
+                        <TextField
+                        required
                         name="message"
                         value={this.state.message}
                         onChange={this.handleChange}
                         label="Message" />
                         <br />
                         <br />
+
                         <Button 
                         type="submit" 
                         value="submit"
@@ -102,10 +122,12 @@ class Contact extends React.Component {
                         name="submit">
                         submit message
                         </Button>
+
                         {this.state.confirmation && 
                         <Typography>
                             Message success!
                         </Typography>}
+
                         {this.state.sendingError &&
                         <Typography>
                             Unfortunately an error occurred. Please try again.
