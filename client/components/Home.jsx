@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, Box, IconButton, Grid } from '@material-ui/core'
+import { Typography, Box, IconButton, Grid, Slide } from '@material-ui/core'
 import { homeStyles } from '../style/muiStyles'
 // import '../style/cursor.css'
 import Typist from 'react-typist'
@@ -40,6 +40,7 @@ const Home = (props) => {
                             </Typography>
                             </Grid>
                         </Grid>
+                    <Slide in={true} direction="right" timeout={1200}>
                     <Box className={classes.iconContainer}>
                         <a target="_blank" href="https://github.com/raaya-pathare">
                             <IconButton>
@@ -154,6 +155,7 @@ const Home = (props) => {
                             </IconButton>
                         </a>
                     </Box>
+                    </Slide>
                 </Grid>
             </>
         )
