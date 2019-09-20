@@ -24,6 +24,9 @@ const styles = theme => ({
         ['@media only screen and (orientation: portrait)']: {
             width: '80vw'
         },
+        '& :-webkit-autofill': {
+            '-webkit-box-shadow': '0 0 0px 1000px #fafafa inset'
+          }
     },
     headingContainer: {
         display: 'flex',
@@ -136,28 +139,28 @@ class HigherOrderComponent extends React.Component {
                             </Typography>
                         </Grid>
                         <Grid item>
-                            <form autoComplete="off">
+                            <form>
                                 <TextField
                                     className={classes.textField}
                                     InputProps={{inputProps}}
                                     InputLabelProps={{ style: {fontFamily: 'Sorts Mill Goudy, serif', color: '#b07009'
                                     } }}
                                     required name="name" value={this.state.name} onChange={this.handleChange}
-                                    label="Name" autoComplete="none"/>
+                                    label="Name"/>
 
                                 <TextField
                                     className={classes.textField}
                                     InputProps={{inputProps}}
                                     InputLabelProps={{ style: {fontFamily: 'Sorts Mill Goudy, serif', color: '#b07009'
                                     } }}
-                                    required name="email" value={this.state.email} onChange={this.handleChange} label="Email" autoComplete="none" />
+                                    required name="email" value={this.state.email} onChange={this.handleChange} label="Email" />
 
                                 <TextField
                                     className={classes.textField}
                                     InputProps={{inputProps}}
                                     InputLabelProps={{ style: {fontFamily: 'Sorts Mill Goudy, serif', color: '#b07009'
                                     } }}
-                                    required name="confEmail" value={this.state.confEmail} onChange={this.handleChange} label="Confirm email" autoComplete="none" />
+                                    required name="confEmail" value={this.state.confEmail} onChange={this.handleChange} label="Confirm email" />
 
                                 {this.state.emailError &&
                                     <Typography className={classes.userMessage}>
@@ -169,7 +172,7 @@ class HigherOrderComponent extends React.Component {
                                     InputProps={{inputProps}}
                                     InputLabelProps={{ style: {fontFamily: 'Sorts Mill Goudy, serif', color: '#b07009'
                                     } }}
-                                    required name="message" multiline={true} rows={7} value={this.state.message} onChange={this.handleChange} label="Message" autoComplete="none"/>
+                                    required name="message" multiline={true} rows={7} value={this.state.message} onChange={this.handleChange} label="Message"/>
                                 <br />
                                 <br />
                                 <Grid item className={classes.userMessageContainer}>
