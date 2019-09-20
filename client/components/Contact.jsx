@@ -7,14 +7,23 @@ const styles = theme => ({
     root: {
         height: '100vh',
         display: 'flex',
-        justifyContent: 'center',
         alignItems: 'center',
+        justifyContent: 'center'
     },
     content: {
         display: 'flex',
-        flexDirection: 'column',
         justifyContent: 'center',
         width: '35vw',
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            marginTop: '10em'
+        },
+    },
+    textField: {
+        width: '35vw',
+        marginBottom: '2vh',
+        ['@media only screen and (orientation: portrait)']: {
+            width: '80vw'
+        },
     },
     headingContainer: {
         display: 'flex',
@@ -31,27 +40,29 @@ const styles = theme => ({
     },
     button: {
         color: '#A100FF', 
-        fontFamily: 'Hammersmith One, sans-serif'
+        fontFamily: 'Hammersmith One, sans-serif',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '2em'
+        },
+    },
+    userMessageContainer: {
+        display: 'flex',
+        justifyContent: 'center'
     },
     userMessage: {
         fontFamily: 'Hammersmith One, sans-serif', 
-        color: 'red'
+        color: 'red',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '1.8em'
+        },
     }
 })
 const inputProps = {
     style: { 
         fontSize: '1.2em', 
         fontFamily: 'Sorts Mill Goudy, serif', 
-        width: '35vw', 
     }
 }
-const inputlabelprops = {
-    style: { 
-        fontFamily: 'Sorts Mill Goudy, serif', 
-        color: '#b07009' 
-    }
-}
-
 
 class HigherOrderComponent extends React.Component {
     constructor(props) {
@@ -115,7 +126,6 @@ class HigherOrderComponent extends React.Component {
     render() {
         const { classes } = this.props
         return (
-            <form>
                 <Grid container className={classes.root}>
                     <Grid container className={classes.content}>
                         <Grid item className={classes.headingContainer}>
@@ -128,19 +138,25 @@ class HigherOrderComponent extends React.Component {
                         <Grid item>
                             <form autoComplete="off">
                                 <TextField
+                                    className={classes.textField}
                                     InputProps={{inputProps}}
-                                    InputLabelProps={{inputlabelprops}}
+                                    InputLabelProps={{ style: {fontFamily: 'Sorts Mill Goudy, serif', color: '#b07009'
+                                    } }}
                                     required name="name" value={this.state.name} onChange={this.handleChange}
                                     label="Name" autoComplete="none"/>
 
                                 <TextField
+                                    className={classes.textField}
                                     InputProps={{inputProps}}
-                                    InputLabelProps={{inputlabelprops}}
+                                    InputLabelProps={{ style: {fontFamily: 'Sorts Mill Goudy, serif', color: '#b07009'
+                                    } }}
                                     required name="email" value={this.state.email} onChange={this.handleChange} label="Email" autoComplete="none" />
 
                                 <TextField
+                                    className={classes.textField}
                                     InputProps={{inputProps}}
-                                    InputLabelProps={{inputlabelprops}}
+                                    InputLabelProps={{ style: {fontFamily: 'Sorts Mill Goudy, serif', color: '#b07009'
+                                    } }}
                                     required name="confEmail" value={this.state.confEmail} onChange={this.handleChange} label="Confirm email" autoComplete="none" />
 
                                 {this.state.emailError &&
@@ -149,17 +165,14 @@ class HigherOrderComponent extends React.Component {
                                     </Typography>}
 
                                 <TextField
+                                    className={classes.textField}
                                     InputProps={{inputProps}}
-                                    InputLabelProps={{inputlabelprops}}
+                                    InputLabelProps={{ style: {fontFamily: 'Sorts Mill Goudy, serif', color: '#b07009'
+                                    } }}
                                     required name="message" multiline={true} rows={7} value={this.state.message} onChange={this.handleChange} label="Message" autoComplete="none"/>
                                 <br />
-                                <Grid className={classes.buttonContainer}>
-                                    <Button className={classes.button} type="submit" value="submit" onClick={this.handleSubmit} name="submit">
-                                        Submit Message
-                                    </Button>
-                                </Grid>
                                 <br />
-
+                                <Grid item className={classes.userMessageContainer}>
                                 {this.state.confirmation &&
                                     <Typography className={classes.userMessage}>
                                         Message sent successfully.
@@ -169,11 +182,18 @@ class HigherOrderComponent extends React.Component {
                                     <Typography className={classes.userMessage}>
                                         Unfortunately an error occurred. Please try again.
                                     </Typography>}
+                                </Grid>
+                                <br/>
+                                <Grid className={classes.buttonContainer}>
+                                    <Button className={classes.button} type="submit" value="submit" onClick={this.handleSubmit} name="submit">
+                                        Submit Message
+                                    </Button>
+                                </Grid>
+                                <br />
                             </form>
                         </Grid>
                     </Grid>
                 </Grid>
-            </form>
         )
     }
 }
