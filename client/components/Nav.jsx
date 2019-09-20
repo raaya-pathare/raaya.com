@@ -92,7 +92,7 @@ const Nav = (props) => {
                   style={{ transformOrigin: '0 0 0' }}
                   {...(pressed ? { timeout: 500 } : {})}
                 >
-                  <Button onClick={handleClose} className={classes.menuItem}>Contact</Button>
+                  <Button onClick={handleClose} className={classes.menuItem}><Link to="/contact" className={classes.link}>Contact</Link></Button>
                 </Grow>
               </Container>
             </StyledMenu>
