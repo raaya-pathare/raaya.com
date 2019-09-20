@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, TextField, Button, Typography } from '@material-ui/core'
 import * as emailjs from 'emailjs-com'
+import Typing from 'react-typing-animation'
 
 class Contact extends React.Component {
 
@@ -18,15 +19,12 @@ class Contact extends React.Component {
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
-
     handleChange = (e) => {
         e.preventDefault()
         this.setState({
             [e.target.name]: e.target.value
         })
     }
-
-
     handleSubmit = (e) => {
         e.preventDefault()
         let templateParams = {
@@ -52,6 +50,8 @@ class Contact extends React.Component {
                     console.log('oops, something went wrong.', err)
                     this.setState({
                         sendingError: true,
+                        emailError: false,
+                        confirmation: false
                     })
                 })
             this.setState({
@@ -61,6 +61,13 @@ class Contact extends React.Component {
                 message: '',
             })
             }        
+    }
+
+    styles = {
+        textField: {
+            width: '35vw',
+            marginBottom: '1.5em'
+        }
     }
 
     render() {
@@ -77,62 +84,70 @@ class Contact extends React.Component {
                     style={{
                         display: 'flex',
                         flexDirection: 'column',
-                        width: '30vw'
+                        justifyContent: 'center',
+                        width: '35vw'
                     }}>
-                        <form>
-                        <TextField
-                        required
-                        name="name"
-                        value={this.state.name}
-                        onChange={this.handleChange}
+                    <Grid item style={{ display: 'flex', justifyContent: 'center'}}>
+                        <Typography style={{
+                            fontFamily: 'Hammersmith One, sans-serif',
+                            fontSize: '10em',
+                            letterSpacing: '-0.1em'
+                        }}>
+                            <Typing hideCursor={true} speed={120}>
+                            Contact.
+                            </Typing>
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <form autocomplete="off">
+                        <TextField 
+                        InputProps={{
+                            style: { fontSize: '1.2em', fontFamily: 'Sorts Mill Goudy, serif', width: '35vw', marginBottom: '2em' }
+                          }}
+                        required name="name" value={this.state.name} onChange={this.handleChange}
                         label="Name" />
 
                         <TextField
-                        required
-                        name="email"
-                        value={this.state.email}
-                        onChange={this.handleChange}
-                        label="Email" />
+                        InputProps={{
+                            style: { fontSize: '1.2em', fontFamily: 'Sorts Mill Goudy, serif', width: '35vw', marginBottom: '2em' }
+                          }}
+                        required name="email" value={this.state.email} onChange={this.handleChange} label="Email" autocomplete="none"/>
 
                         <TextField
-                        required
-                        name="confEmail"
-                        value={this.state.confEmail}
-                        onChange={this.handleChange}
-                        label="Confirm email" />
+                        InputProps={{
+                            style: { fontSize: '1.2em', fontFamily: 'Sorts Mill Goudy, serif', width: '35vw', marginBottom: '2em' }
+                          }}
+                        required name="confEmail" value={this.state.confEmail} onChange={this.handleChange} label="Confirm email" />
 
                         {this.state.emailError &&
-                        <Typography>
+                        <Typography style={{ fontFamily: 'Hammersmith One, sans-serif', color: 'red' }}>
                             Email addresses do not match. Please check and re-enter.
                         </Typography>}
 
                         <TextField
-                        required
-                        name="message"
-                        value={this.state.message}
-                        onChange={this.handleChange}
-                        label="Message" />
+                        InputProps={{
+                            style: { fontSize: '1.2em', fontFamily: 'Sorts Mill Goudy, serif', width: '35vw', marginBottom: '2em' }
+                          }}
+                        required name="message" multiline={true} rows={7} value={this.state.message} onChange={this.handleChange} label="Message" />
                         <br />
-                        <br />
-
-                        <Button 
-                        type="submit" 
-                        value="submit"
-                        onClick={this.handleSubmit}
-                        name="submit">
-                        submit message
+                        <Grid item style={{ display: 'flex', justifyContent: 'center' }}>
+                        <Button style={{ color: '#A100FF', fontFamily: 'Hammersmith One, sans-serif' }} type="submit" value="submit" onClick={this.handleSubmit} name="submit">
+                        Submit Message
                         </Button>
+                        </Grid>
+                        <br />
 
                         {this.state.confirmation && 
-                        <Typography>
-                            Message success!
+                        <Typography style={{ fontFamily: 'Hammersmith One, sans-serif', color: 'red' }}>
+                            Message sent successfully.
                         </Typography>}
 
                         {this.state.sendingError &&
-                        <Typography>
+                        <Typography style={{ fontFamily: 'Hammersmith One, sans-serif', color: 'red' }}>
                             Unfortunately an error occurred. Please try again.
                         </Typography>}
                         </form>
+                    </Grid>
                 </Grid>
             </Grid>
             </form>
