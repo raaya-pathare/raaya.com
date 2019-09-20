@@ -57,60 +57,58 @@ export const homeStyles = makeStyles(theme => ({
     },
     allTextBox: {
         position: 'absolute',
-        top: '13%',
+        top: '25%',
         [theme.breakpoints.down('md')]: {
-            top: '20%'
+            top: '30%'
         },
-        left: '5%',
+        left: '6%',
         display: 'flex',
         flexDirection: 'column',
         width: '90vw',
         lineHeight: '1em'
     },
     helloIm: {
-        fontSize: '200px',
         [theme.breakpoints.down('md')]: {
-            fontSize: '180px'
+            fontSize: '7vh'
         },
         ['@media only screen and (orientation: landscape)']: {
-            fontSize: '12vw'
+            fontSize: '7vw'
         },
         fontFamily: 'Montserrat, sans-serif',
         fontWeight: 400,
         letterSpacing: '-0.12em',
-        wordSpacing: '-10px',
         height: '1em',
         lineHeight: '1em'
     },
     raaya: {
-        fontSize: '200px',
         [theme.breakpoints.down('md')]: {
-            fontSize: '180px'
+            fontSize: '6.9vh'
         },
         ['@media only screen and (orientation: landscape)']: {
-            fontSize: '12vw'
+            fontSize: '7vw'
         },
         fontFamily: 'Hammersmith One, sans-serif',
         letterSpacing: '-0.1em',
         color: '#A100FF',
         height: '1em',
-        lineHeight: '1em'
+        lineHeight: '1em',
+        marginLeft: '10px'
     },
     firstLine: {
         [theme.breakpoints.down('md')]: {
-            height: '25em'
+            height: '8vh'
         },
         ['@media only screen and (orientation: landscape)']: {
-            height: '12vw'
+            height: '7vw'
         },
+        wordSpacing: '1px',
     },
     iAmA: {
-        fontSize: '200px',
         [theme.breakpoints.down('md')]: {
-            fontSize: '180px'
+            fontSize: '7vh'
         },
         ['@media only screen and (orientation: landscape)']: {
-            fontSize: '12vw'
+            fontSize: '7vw'
         },
         fontFamily: 'Montserrat, sans-serif',
         fontWeight: 400,
@@ -120,17 +118,16 @@ export const homeStyles = makeStyles(theme => ({
     },
     typedText: {
         fontFamily: 'Sorts Mill Goudy, serif',
-        fontSize: '170px',
         [theme.breakpoints.down('md')]: {
-            fontSize: '120px'
+            fontSize: '8vh'
         },
         ['@media only screen and (orientation: landscape)']: {
-            fontSize: '10vw'
+            fontSize: '6vw'
         },
         color: '#A100FF',
-        marginTop: '0.3em',
+        marginTop: '0.25em',
         position: 'absolute',
-        left: '1%',
+        left: '0.5%',
         height: '1em',
         lineHeight: '1em'
     },

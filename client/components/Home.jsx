@@ -1,7 +1,6 @@
 import React from 'react'
 import { Typography, Box, IconButton, Grid, Slide } from '@material-ui/core'
 import { homeStyles } from '../style/muiStyles'
-// import '../style/cursor.css'
 import Typist from 'react-typist'
 
 const Home = (props) => {
