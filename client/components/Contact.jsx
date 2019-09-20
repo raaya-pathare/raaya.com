@@ -15,9 +15,6 @@ const styles = theme => ({
         justifyContent: 'center',
         width: '35vw',
         marginTop: '5em',
-        // [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
-        //     marginTop: '12em'
-        // },
         ['@media only screen and (orientation: portrait)']: {
             marginTop: '14em'
         },
