@@ -1,10 +1,10 @@
 import React from 'react'
 import { Grid, Typography } from '@material-ui/core'
 
-import { artworkStyles } from '../style/muiStyles'
+import { sliderStyles } from '../style/muiStyles'
 
 const Slider = ({ image, id, name, year }, ...props) => {
-    const classes = artworkStyles(props)
+    const classes = sliderStyles(props)
     return (
     <Grid item className={classes.slide}
         style={{

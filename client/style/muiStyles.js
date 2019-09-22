@@ -651,50 +651,7 @@ export const ProjectsStyles = makeStyles(theme => ({
     }
 }))
 
-export const artworkStyles = makeStyles(theme => ({
-    root: {
-        display: 'flex',
-        justifyContent: 'center'
-    },
-    titlesContainer: {
-        display: 'flex',
-        width: '90vw',
-        marginTop: '12vh',
-        ['@media only screen and (orientation: portrait)']: {
-            marginTop: '17vh'
-        },
-        marginRight: '1%',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-end'
-    }, 
-    heading: {
-        fontFamily: 'Hammersmith One, sans-serif',
-        fontSize: '10em',
-        ['@media only screen and (orientation: portrait)']: {
-            fontSize: '12em'
-        },
-        letterSpacing: '-0.1em',
-        height: '1.07em',
-        marginRight: '0.3em'
-    }, 
-    linkContainer: {
-        flexGrow: 1,
-        textAlign: 'right'
-    },
-    link: {
-        textDecoration: 'none',
-        color: 'black',
-        fontFamily: 'Sorts Mill Goudy, serif',
-        fontSize: '0.9em',
-        ['@media only screen and (orientation: portrait)']: {
-            fontSize: '1.4em'
-        }
-    },
-    content: {
-        display: 'flex',
-        height: '40vh',
-        width: '95vw'
-    }, 
+export const sliderStyles = makeStyles(theme => ({
     slide: {
         height: '400px',
         width: '400px',
