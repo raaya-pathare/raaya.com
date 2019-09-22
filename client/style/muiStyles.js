@@ -651,3 +651,43 @@ export const ProjectsStyles = makeStyles(theme => ({
     }
 }))
 
+export const artworkStyles = makeStyles(theme => ({
+    root: {
+        display: 'flex',
+        justifyContent: 'center'
+    },
+    titlesContainer: {
+        display: 'flex',
+        width: '90vw',
+        marginTop: '12vh',
+        marginRight: '1%',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-end'
+    }, 
+    heading: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '10em',
+        letterSpacing: '-0.1em',
+        height: '1.07em',
+        marginRight: '0.3em'
+    },
+    aboutArt: {
+        width: '20em',
+    },
+    about: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '1em',
+        textAlign: 'justify'
+    }, 
+    linkContainer: {
+        flexGrow: 1,
+        textAlign: 'right'
+    },
+    link: {
+        textDecoration: 'none',
+        color: 'black',
+        fontFamily: 'Sorts Mill Goudy, serif',
+        fontSize: '1.1em',
+    }
+}))
+

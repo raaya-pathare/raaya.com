@@ -6,6 +6,7 @@ import Home from './Home'
 import Contact from './Contact'
 import About from './About'
 import Projects from './Projects'
+import Artwork from './Artwork'
 import { theme } from '../style/muiStyles'
 
 import { ThemeProvider } from '@material-ui/styles';
@@ -21,6 +22,7 @@ const App = () => {
                 <Route exact path="/contact" component={Contact} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/projects" component={Projects} />
+                <Route exact path="/artwork" component={Artwork} />
             </Router>
     </ThemeProvider>
   )
