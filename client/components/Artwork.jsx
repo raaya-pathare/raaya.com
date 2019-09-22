@@ -16,13 +16,13 @@ const Artwork = (props) => {
                         artwork. 
                     </Typography>
                 </Grid>
-                <Grid item className={classes.aboutArt}>
+                {/* <Grid item className={classes.aboutArt}>
                     <Typography className={classes.about}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna niqi.
                     </Typography>
-                </Grid>
+                </Grid> */}
                 <Grid item className={classes.linkContainer}>
-                    <a className={classes.link} href="https://www.instagram.com/by.raaya/?hl=en" target="_blank">www.instagram.com/by.raaya</a>
+                    <a className={classes.link} href="https://www.instagram.com/by.raaya/?hl=en" target="_blank">instagram.com/by.raaya</a>
                 </Grid>
             </Grid>
         </Grid>

@@ -660,6 +660,9 @@ export const artworkStyles = makeStyles(theme => ({
         display: 'flex',
         width: '90vw',
         marginTop: '12vh',
+        ['@media only screen and (orientation: portrait)']: {
+            marginTop: '17vh'
+        },
         marginRight: '1%',
         justifyContent: 'flex-start',
         alignItems: 'flex-end'
@@ -667,18 +670,28 @@ export const artworkStyles = makeStyles(theme => ({
     heading: {
         fontFamily: 'Hammersmith One, sans-serif',
         fontSize: '10em',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '12em'
+        },
         letterSpacing: '-0.1em',
         height: '1.07em',
         marginRight: '0.3em'
     },
-    aboutArt: {
-        width: '20em',
-    },
-    about: {
-        fontFamily: 'Hammersmith One, sans-serif',
-        fontSize: '1em',
-        textAlign: 'justify'
-    }, 
+    // aboutArt: {
+    //     width: '20em',
+    //     [theme.breakpoints.down('md')]: {
+    //         width: '15em',
+    //         marginRight: '10px'
+    //     },
+    // },
+    // about: {
+    //     fontFamily: 'Hammersmith One, sans-serif',
+    //     fontSize: '1em',
+    //     [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+    //         fontSize: '0.7em'
+    //     },
+    //     textAlign: 'justify'
+    // }, 
     linkContainer: {
         flexGrow: 1,
         textAlign: 'right'
@@ -687,7 +700,10 @@ export const artworkStyles = makeStyles(theme => ({
         textDecoration: 'none',
         color: 'black',
         fontFamily: 'Sorts Mill Goudy, serif',
-        fontSize: '1.1em',
+        fontSize: '0.9em',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '1.4em'
+        }
     }
 }))
 
