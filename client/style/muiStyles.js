@@ -676,22 +676,7 @@ export const artworkStyles = makeStyles(theme => ({
         letterSpacing: '-0.1em',
         height: '1.07em',
         marginRight: '0.3em'
-    },
-    // aboutArt: {
-    //     width: '20em',
-    //     [theme.breakpoints.down('md')]: {
-    //         width: '15em',
-    //         marginRight: '10px'
-    //     },
-    // },
-    // about: {
-    //     fontFamily: 'Hammersmith One, sans-serif',
-    //     fontSize: '1em',
-    //     [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
-    //         fontSize: '0.7em'
-    //     },
-    //     textAlign: 'justify'
-    // }, 
+    }, 
     linkContainer: {
         flexGrow: 1,
         textAlign: 'right'
@@ -704,6 +689,18 @@ export const artworkStyles = makeStyles(theme => ({
         ['@media only screen and (orientation: portrait)']: {
             fontSize: '1.4em'
         }
+    },
+    content: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        height: '40vh',
+        width: '40vw'
+    }, 
+    slide: {
+        height: '400px',
+        width: '400px',
+        backgroundPosition: 'center bottom',
+        backgroundSize: 'cover'
     }
 }))
 
