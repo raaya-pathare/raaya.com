@@ -692,9 +692,8 @@ export const artworkStyles = makeStyles(theme => ({
     },
     content: {
         display: 'flex',
-        justifyContent: 'space-between',
         height: '40vh',
-        width: '40vw'
+        width: '95vw'
     }, 
     slide: {
         height: '400px',
@@ -704,3 +703,14 @@ export const artworkStyles = makeStyles(theme => ({
     }
 }))
 
+{/* <SwipeableViews>
+    <div style={Object.assign({}, styles.slide, styles.slide1)}>
+      slide n°1
+    </div>
+    <div style={Object.assign({}, styles.slide, styles.slide2)}>
+      slide n°2
+    </div>
+    <div style={Object.assign({}, styles.slide, styles.slide3)}>
+      slide n°3
+    </div>
+  </SwipeableViews> */}

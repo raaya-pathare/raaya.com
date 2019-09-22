@@ -24,11 +24,15 @@ const Artwork = (props) => {
                     <a className={classes.link} href="https://www.instagram.com/by.raaya/?hl=en" target="_blank">instagram.com/by.raaya</a>
                 </Grid>
             </Grid>
+            <SwipeableViews>
+            <div >
             <Grid container className={classes.content}>
                 {data.map(el => {
                     return <Slider id={el.id} name={el.name} year={el.year} image={el.image}/>
                 })}
             </Grid>
+            </div>
+            </SwipeableViews>
         </Grid>
     )
 }
