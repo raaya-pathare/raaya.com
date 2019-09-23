@@ -14,7 +14,7 @@ const styles = theme => ({
         display: 'flex',
         justifyContent: 'center',
         width: '35vw',
-        marginTop: '5em',
+        marginTop: '3em',
         ['@media only screen and (orientation: portrait)']: {
             marginTop: '14em'
         },
@@ -31,22 +31,41 @@ const styles = theme => ({
     },
     headingContainer: {
         display: 'flex',
-        justifyContent: 'center'
+        flexDirection: 'column',
+        alignItems: 'center'
     },
     heading: {
-        fontFamily: 'Sorts Mill Goudy, serif',
+        fontFamily: 'Hammersmith One, sans-serif',
         fontSize: '10em',
-        letterSpacing: '-0.1em'
+        height: '1em',
+        letterSpacing: '-0.1em',
+    },
+    subheading: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '1em',
+        textAlign: 'justify',
+        letterSpacing: '-0.05em',
+        width: '54%',
+        marginTop: '25px'
+    },
+    hr: {
+        border: '0.5px solid black',
+        height: '1px',
+        width: '100%',
+        marginBottom: '2.5em',
+        marginTop: '1.3em'
     },
     buttonContainer: {
         display: 'flex', 
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginTop: '-15px'
     },
     button: {
-        color: '#A100FF', 
+        color: 'black', 
+        textTransform: 'capitalize',
         fontFamily: 'Hammersmith One, sans-serif',
         ['@media only screen and (orientation: portrait)']: {
-            fontSize: '2em'
+            fontSize: '1.5em'
         },
     },
     userMessageContainer: {
@@ -55,7 +74,7 @@ const styles = theme => ({
     },
     userMessage: {
         fontFamily: 'Hammersmith One, sans-serif', 
-        color: 'red',
+        color: '#A100FF',
         ['@media only screen and (orientation: portrait)']: {
             fontSize: '1.8em'
         },
@@ -88,12 +107,6 @@ const styles = theme => ({
         },
     }
 })
-const inputProps = {
-    style: { 
-        fontSize: '1.2em', 
-        fontFamily: 'Sorts Mill Goudy, serif', 
-    }
-}
 
 class HigherOrderComponent extends React.Component {
     constructor(props) {
@@ -156,6 +169,12 @@ class HigherOrderComponent extends React.Component {
 
     render() {
         const { classes } = this.props
+        const inputProps = {
+            style: { 
+                fontSize: '1.2em', 
+                fontFamily: 'Sorts Mill Goudy, serif'
+            }
+        }
         return (
                 <Grid container className={classes.root}>
                     <Grid container className={classes.content}>
@@ -165,13 +184,17 @@ class HigherOrderComponent extends React.Component {
                                     contact.
                                 </Typing>
                             </Typography>
+                            <Typography className={classes.subheading}>
+                                    If you have a question, want to ask about a project or just want to say hello, don't hesitate to reach out.
+                            </Typography>
+                            <hr className={classes.hr} />
                         </Grid>
                         <Grid item>
                             <form>
                                 <TextField
                                     className={classes.textField}
                                     InputProps={{inputProps}}
-                                    InputLabelProps={{ style: {fontFamily: 'Hammersmith One, sans-serif', color: '#b07009'
+                                    InputLabelProps={{ style: {fontFamily: 'Hammersmith One, sans-serif', color: '#b07009', fontSize: '1em'
                                     } }}
                                     required name="name" value={this.state.name} onChange={this.handleChange}
                                     label="Name"/>
@@ -179,14 +202,14 @@ class HigherOrderComponent extends React.Component {
                                 <TextField
                                     className={classes.textField}
                                     InputProps={{inputProps}}
-                                    InputLabelProps={{ style: {fontFamily: 'Hammersmith One, sans-serif', color: '#b07009'
+                                    InputLabelProps={{ style: {fontFamily: 'Hammersmith One, sans-serif', color: '#b07009', fontSize: '1em'
                                     } }}
                                     required name="email" value={this.state.email} onChange={this.handleChange} label="Email" />
 
                                 <TextField
                                     className={classes.textField}
                                     InputProps={{inputProps}}
-                                    InputLabelProps={{ style: {fontFamily: 'Hammersmith One, sans-serif', color: '#b07009'
+                                    InputLabelProps={{ style: {fontFamily: 'Hammersmith One, sans-serif', color: '#b07009', fontSize: '1em'
                                     } }}
                                     required name="confEmail" value={this.state.confEmail} onChange={this.handleChange} label="Confirm email" />
 
@@ -198,7 +221,7 @@ class HigherOrderComponent extends React.Component {
                                 <TextField
                                     className={classes.textField}
                                     InputProps={{inputProps}}
-                                    InputLabelProps={{ style: {fontFamily: 'Hammersmith One, sans-serif', color: '#b07009'
+                                    InputLabelProps={{ style: {fontFamily: 'Hammersmith One, sans-serif', color: '#b07009', fontSize: '1em'
                                     } }}
                                     required name="message" multiline={true} rows={7} value={this.state.message} onChange={this.handleChange} label="Message"/>
                                 <br />
@@ -217,7 +240,7 @@ class HigherOrderComponent extends React.Component {
                                 <br/>
                                 <Grid className={classes.buttonContainer}>
                                     <Button className={classes.button} type="submit" value="submit" onClick={this.handleSubmit} name="submit">
-                                        Submit Message
+                                        submit message
                                     </Button>
                                 </Grid>
                                 <br />
