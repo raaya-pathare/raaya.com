@@ -10,11 +10,11 @@ const styles = theme => ({
         display: 'flex',
         justifyContent: 'center'
     },
-    titlesContainer: {
+    headingContainer: {
         display: 'flex',
         width: '90vw',
         marginTop: '12vh',
-        marginBottom: '4vh',
+        marginBottom: '3vh',
         ['@media only screen and (orientation: portrait)']: {
             marginTop: '17vh'
         },
@@ -32,6 +32,26 @@ const styles = theme => ({
         height: '1.07em',
         marginRight: '0.3em'
     }, 
+    hr: {
+        border: '0.5px solid black',
+        width: '90vw',
+        marginTop: '3vh',
+    },
+    subheadingContainer: {
+        display: 'flex',
+        width: '90vw',
+        marginBottom: '2vh',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-end'
+    },
+    about: {
+        width: '20vw',
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '1em',
+        textAlign: 'justify',
+        lineHeight: '1em',
+        letterSpacing: '-0.05em'
+    },
     linkContainer: {
         flexGrow: 1,
         textAlign: 'right'
@@ -61,7 +81,7 @@ class HigherOrderComponent extends React.Component {
 
     return (
         <Grid container className={classes.root}>
-            <Grid container className={classes.titlesContainer}>
+            <Grid container className={classes.headingContainer}>
                 <Grid item>
                     <Typing hideCursor={true} speed={120}>
                     <Typography className={classes.heading}>
@@ -69,6 +89,12 @@ class HigherOrderComponent extends React.Component {
                     </Typography>
                     </Typing>
                 </Grid>
+                <hr className={classes.hr} />
+            </Grid>
+            <Grid item className={classes.subheadingContainer}>
+                <Typography className={classes.about}>
+                    Freehand artwork executed with a variety of mediums including: ink, graphite, charcoal and watercolor. Hover or click on the images below for details, or click the link to my instagram on the right for more work.
+                </Typography>
                 <Grid item className={classes.linkContainer}>
                     <a className={classes.link} href="https://www.instagram.com/by.raaya/?hl=en" target="_blank">instagram.com/by.raaya</a>
                 </Grid>
