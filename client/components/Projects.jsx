@@ -20,6 +20,7 @@ const Projects = (props) => {
                         selected work.
                     </Typing>
                 </Typography>
+                <hr className={classes.hr} />
             </Grid>
             <Grid item className={classes.dateContainer1}>
                 <Slide direction="left" in={true} timeout={1300} mountOnEnter unmountOnExit>
