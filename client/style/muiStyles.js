@@ -417,7 +417,7 @@ export const ProjectsStyles = makeStyles(theme => ({
         ['@media only screen and (orientation: portrait)']: {
             alignSelf: 'flex-end',
             width: '65%',
-            height: '35%',
+            height: '60%',
             overflow: 'scroll',
             transform: 'translate(165px, -200px)'
         },
@@ -461,9 +461,9 @@ export const ProjectsStyles = makeStyles(theme => ({
         width: '100vw',
         height: '2px',
         transform: 'translateY(14em)',
-        [theme.breakpoints.down('md')]: {
-            transform: 'translateY(6em)',
-        }
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            transform: 'translateY(6.5em)'
+        },
     },
     date2: {
         fontFamily: 'Hammersmith One, sans-serif',
@@ -549,7 +549,7 @@ export const ProjectsStyles = makeStyles(theme => ({
         marginBottom: '22vh',
         ['@media only screen and (orientation: portrait)']: {
             height: '65vh',
-            marginBottom: '12vh'
+            marginBottom: '25vh'
         },
         [theme.breakpoints.down('md')]: {
             height: '90vw'
@@ -563,8 +563,8 @@ export const ProjectsStyles = makeStyles(theme => ({
         backgroundColor: '#1f1f1f',
         ['@media only screen and (orientation: portrait)']: {
             width: '65%',
-            height: '35%',
-            transform: 'translate(165px, 450px)',
+            height: '57%',
+            transform: 'translate(165px, 600px)',
             overflow: 'scroll'
         },
         width: '20%',
