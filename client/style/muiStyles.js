@@ -651,3 +651,70 @@ export const ProjectsStyles = makeStyles(theme => ({
     }
 }))
 
+export const sliderStyles = makeStyles(theme => ({
+    squareBehind: {
+        position: 'absolute',
+        height: '28vw',
+        width: '28vw',
+        marginBottom: '4vh',
+        [theme.breakpoints.down('md')]: {
+            height: '43vw',
+            width: '43vw'
+        },
+        backgroundColor: 'black',
+        zIndex: '-1',
+        '&:hover': {
+            transition: '1s',
+        }
+    },
+    image: {
+        position: 'absolute',
+        zIndex: '10',
+        height: '28vw',
+        width: '28vw',
+        marginBottom: '4vh',
+        [theme.breakpoints.down('md')]: {
+            height: '43vw',
+            width: '43vw'
+        },
+        backgroundPosition: 'center bottom',
+        backgroundSize: 'cover',
+        '&:hover': {
+            transition: '0.6s',
+            opacity: '0.3'
+        }
+    },
+    slide: {
+        display: 'flex',
+        justifyContent: 'center',
+        height: '28vw',
+        width: '28vw',
+        marginBottom: '4vh',
+        [theme.breakpoints.down('md')]: {
+            height: '43vw',
+            width: '43vw'
+        },
+    }, 
+    textContainer: {
+        display: 'flex',
+        width: '80%',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        textAlign: 'center'
+    },
+    id: {
+        fontSize: '1.2em',
+        color: 'white',
+        fontFamily: 'Sorts Mill Goudy, serif'
+    },
+    name: {
+        fontSize: '2em',
+        color: 'white',
+        fontFamily: 'Hammersmith One, sans-serif'
+    },
+    year: {
+        fontSize: '1.2em',
+        color: 'white',
+        fontFamily: 'Sorts Mill Goudy, serif'
+    }
+}))
