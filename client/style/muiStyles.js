@@ -174,13 +174,13 @@ export const NavStyles = makeStyles(theme => ({
         marginTop: '0.5em',
         '&:hover': {
             transition: '0.5s',
-            transform: 'scale(1.1)'
+            transform: 'scale(1.05)'
         },
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
-            fontSize: '2em'
+            fontSize: '1.5em'
         },
-        ['@media only screen and (orientation: landscape)']: {
-            fontSize: '1.3em'
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '1.1em'
         },
         textDecoration: 'none'
     },
