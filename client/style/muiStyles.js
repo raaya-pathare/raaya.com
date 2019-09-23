@@ -362,6 +362,16 @@ export const ProjectsStyles = makeStyles(theme => ({
         textAlign: 'left',
         lineHeight: '0.7em',
     },
+    years: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '1em',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '1.3em'
+        },
+        marginTop: '2vh',
+        marginBottom: '2vh',
+        marginLeft: '11vw'
+    },
     hr: {
         border: '0.5px solid black',
         width: '100vw',
