@@ -190,8 +190,8 @@ export const NavStyles = makeStyles(theme => ({
     },
     icon: {
         color: '#A100FF',
-        fontSize: '2.5em',
-        [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
+        fontSize: '2em',
+        [`${theme.breakpoints.down('md')} and (orientation: portrait)`]: {
             fontSize: '3em'
         },
     },
@@ -215,7 +215,8 @@ export const NavStyles = makeStyles(theme => ({
         },
     },
     menuItem: {
-        fontFamily: 'Montserrat, sans-serif',
+        fontFamily: 'Sorts Mill Goudy, serif',
+        textTransform: 'capitalize',
         color: '#A100FF',
         [theme.breakpoints.down('md')]: { // eslint-disable-line no-useless-computed-key
             fontSize: '1.7em'
@@ -236,7 +237,7 @@ export const NavStyles = makeStyles(theme => ({
         textDecoration: 'none',
         '&:hover': {
             transition: '0.5s',
-            transform: 'scale(1.1)'
+            transform: 'scale(1.05)'
         }
     }
 }))
