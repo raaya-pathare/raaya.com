@@ -413,6 +413,7 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
     },
     WBinfo: {
+        alignItems: 'center',
         backgroundColor: '#1f1f1f',
         ['@media only screen and (orientation: portrait)']: {
             alignSelf: 'flex-end',
@@ -561,6 +562,7 @@ export const ProjectsStyles = makeStyles(theme => ({
     untiedInfo: {
         zIndex: '1',
         backgroundColor: '#1f1f1f',
+        alignItems: 'center',
         ['@media only screen and (orientation: portrait)']: {
             width: '65%',
             height: '57%',
@@ -571,7 +573,7 @@ export const ProjectsStyles = makeStyles(theme => ({
         height: '70%',
         [theme.breakpoints.up('lg')]: {
             transform: 'translate(140px, 200px)',
-            height: '57%',
+            height: '52%',
             overflow: 'scroll'
         },
         [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
