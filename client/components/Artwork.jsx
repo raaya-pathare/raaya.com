@@ -91,6 +91,7 @@ class HigherOrderComponent extends React.Component {
                 </Grid>
                 <hr className={classes.hr} />
             </Grid>
+            <Slide direction="up" in={true} timeout={1200} mountOnEnter unmountOnExit>
             <Grid item className={classes.subheadingContainer}>
                 <Typography className={classes.about}>
                     Freehand artwork executed with a variety of mediums including: ink, graphite, charcoal and watercolor. Hover or click on the images below for details, or click the link to my instagram on the right for more work.
@@ -99,36 +100,16 @@ class HigherOrderComponent extends React.Component {
                     <a className={classes.link} href="https://www.instagram.com/by.raaya/?hl=en" target="_blank">instagram.com/by.raaya</a>
                 </Grid>
             </Grid>
+            </Slide>
+            <Slide direction="up" in={true} timeout={1300} mountOnEnter unmountOnExit>
             <Grid container className={classes.content}>
                 {data.map(el => {
                     return <Slider id={el.id} name={el.name} year={el.year} image={el.image}/>
                 })}
             </Grid>
+            </Slide>
         </Grid>
     )}
 }
 
 export default withStyles(styles)(HigherOrderComponent)
-
-
-{/* <Grid item className={classes.aboutArt}>
-                    <Typography className={classes.about}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna niqi.
-                    </Typography>
-                </Grid> */}
-
-    // aboutArt: {
-    //     width: '20em',
-    //     [theme.breakpoints.down('md')]: {
-    //         width: '15em',
-    //         marginRight: '10px'
-    //     },
-    // },
-    // about: {
-    //     fontFamily: 'Hammersmith One, sans-serif',
-    //     fontSize: '1em',
-    //     [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
-    //         fontSize: '0.7em'
-    //     },
-    //     textAlign: 'justify'
-    // },
