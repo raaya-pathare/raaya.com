@@ -336,24 +336,46 @@ export const ProjectsStyles = makeStyles(theme => ({
         backgroundColor: 'white'
     },
     headingContainer: {
-        marginTop: '15em',
+        marginTop: '25vh',
         ['@media only screen and (orientation: portrait)']: {
-            marginTop: '25em'
+            marginTop: '25vh'
         },
-        width: '70vw',
-        [theme.breakpoints.down('md')]: {
-            width: '90vw'
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            marginTop: '30vh'
         },
+        width: '100vw'
     },
     heading: {
-        fontFamily: 'Sorts Mill Goudy, serif',
-        fontSize: '13em',
-        fontWeight: '800',
-        color: '#A100FF',
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '10em',
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            fontSize: '7em'
+        },
+        marginLeft: '11vw',
+        ['@media only screen and (orientation: portrait)']: {
+            textAlign: 'center',
+            fontSize: '10em',
+            marginLeft: '0'
+        },
+        fontWeight: '400',
         letterSpacing: '-0.10em',
-        textAlign: 'center',
+        textAlign: 'left',
         lineHeight: '0.7em',
-        marginBottom: '0.4em',
+    },
+    years: {
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '1em',
+        ['@media only screen and (orientation: portrait)']: {
+            fontSize: '1.3em'
+        },
+        marginTop: '2vh',
+        marginBottom: '2vh',
+        marginLeft: '11vw'
+    },
+    hr: {
+        border: '0.5px solid black',
+        width: '100vw',
+        marginBottom: '4em'
     },
     WBContainer: {
         display: 'flex',
@@ -373,10 +395,8 @@ export const ProjectsStyles = makeStyles(theme => ({
     WBphoto: {
         backgroundImage: `url(${image3})`,
         [theme.breakpoints.up('lg')]: {
-            opacity: '0.7',
             '&:hover': {
                 transition: 'all 1s',
-                opacity: '1',
                 transform: 'scale(1.05)'
             },
         },
@@ -393,11 +413,12 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
     },
     WBinfo: {
+        alignItems: 'center',
         backgroundColor: '#1f1f1f',
         ['@media only screen and (orientation: portrait)']: {
             alignSelf: 'flex-end',
             width: '65%',
-            height: '35%',
+            height: '60%',
             overflow: 'scroll',
             transform: 'translate(165px, -200px)'
         },
@@ -441,9 +462,9 @@ export const ProjectsStyles = makeStyles(theme => ({
         width: '100vw',
         height: '2px',
         transform: 'translateY(14em)',
-        [theme.breakpoints.down('md')]: {
-            transform: 'translateY(6em)',
-        }
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            transform: 'translateY(6.5em)'
+        },
     },
     date2: {
         fontFamily: 'Hammersmith One, sans-serif',
@@ -529,7 +550,7 @@ export const ProjectsStyles = makeStyles(theme => ({
         marginBottom: '22vh',
         ['@media only screen and (orientation: portrait)']: {
             height: '65vh',
-            marginBottom: '12vh'
+            marginBottom: '25vh'
         },
         [theme.breakpoints.down('md')]: {
             height: '90vw'
@@ -541,17 +562,18 @@ export const ProjectsStyles = makeStyles(theme => ({
     untiedInfo: {
         zIndex: '1',
         backgroundColor: '#1f1f1f',
+        alignItems: 'center',
         ['@media only screen and (orientation: portrait)']: {
             width: '65%',
-            height: '35%',
-            transform: 'translate(165px, 450px)',
+            height: '57%',
+            transform: 'translate(165px, 600px)',
             overflow: 'scroll'
         },
         width: '20%',
         height: '70%',
         [theme.breakpoints.up('lg')]: {
             transform: 'translate(140px, 200px)',
-            height: '57%',
+            height: '52%',
             overflow: 'scroll'
         },
         [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
@@ -568,10 +590,8 @@ export const ProjectsStyles = makeStyles(theme => ({
             alignSelf: 'center',
         },
         [theme.breakpoints.up('lg')]: {
-            opacity: '0.7',
             '&:hover': {
                 transition: 'all 1s',
-                opacity: '1',
                 transform: 'scale(1.05)'
             },
         },
@@ -612,10 +632,8 @@ export const ProjectsStyles = makeStyles(theme => ({
     aspirePhoto: {
         backgroundImage: `url(${image5})`,
         [theme.breakpoints.up('lg')]: {
-            opacity: '0.7',
             '&:hover': {
                 transition: '1s',
-                opacity: '1',
                 transform: 'scale(1.09)'
             },
         },
