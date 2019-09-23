@@ -12,7 +12,7 @@ export default [
     {
         id: '1',
         name: '"Chicago"',
-        year: '2019',
+        year: '2018',
         image: image1
     }, 
     {

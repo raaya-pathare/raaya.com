@@ -1,7 +1,5 @@
 import React from 'react'
 import { Grid, Typography, Slide, withStyles } from '@material-ui/core'
-import SwipeableViews from 'react-swipeable-views'
-import { autoPlay } from 'react-swipeable-views-utils'
 import Typing from 'react-typing-animation'
 
 import data from './images'
@@ -16,6 +14,7 @@ const styles = theme => ({
         display: 'flex',
         width: '90vw',
         marginTop: '12vh',
+        marginBottom: '4vh',
         ['@media only screen and (orientation: portrait)']: {
             marginTop: '17vh'
         },
@@ -49,32 +48,17 @@ const styles = theme => ({
     content: {
         display: 'flex',
         flexDirection: 'row',
-        // height: '40vh',
-        width: '95vw'
-    },
-    slide: {
-        height: '400px',
-        width: '400px'
+        justifyContent: 'space-between',
+        backgroundColor: 'none',
+        width: '90vw'
     }
 })
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
-
 class HigherOrderComponent extends React.Component {
 
-    state = {
-        index: 0
-    }
-
-    handleChangeIndex = index => {
-        this.setState({
-            index,
-        })
-    }
-
     render() {
-    const { index } = this.state
     const { classes } = this.props
+
     return (
         <Grid container className={classes.root}>
             <Grid container className={classes.titlesContainer}>
@@ -89,27 +73,14 @@ class HigherOrderComponent extends React.Component {
                     <a className={classes.link} href="https://www.instagram.com/by.raaya/?hl=en" target="_blank">instagram.com/by.raaya</a>
                 </Grid>
             </Grid>
-            <AutoPlaySwipeableViews
-                autoPlay={true}
-                enableMouseEvents={true}
-                axis={'x'}
-                animateTransitions={true}
-                index={index}
-                onChangeIndex={this.handleChangeIndex}>
-            <div style={Object.assign({}, styles.slide)}>
             <Grid container className={classes.content}>
                 {data.map(el => {
                     return <Slider id={el.id} name={el.name} year={el.year} image={el.image}/>
                 })}
             </Grid>
-            </div>
-            </AutoPlaySwipeableViews>
         </Grid>
     )}
 }
-
-<div style={Object.assign({}, styles.slide, styles.slide1)}>slide n°1</div>
-
 
 export default withStyles(styles)(HigherOrderComponent)
 
