@@ -4,80 +4,10 @@ import Typing from 'react-typing-animation'
 
 import data from './images'
 import Slider from './Slider'
+import { artworkStyles } from '../style/muiStyles'
 
-const styles = theme => ({
-    root: {
-        display: 'flex',
-        justifyContent: 'center'
-    },
-    headingContainer: {
-        display: 'flex',
-        width: '90vw',
-        marginTop: '12vh',
-        marginBottom: '3vh',
-        ['@media only screen and (orientation: portrait)']: {
-            marginTop: '17vh'
-        },
-        marginRight: '1%',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-end'
-    }, 
-    heading: {
-        fontFamily: 'Hammersmith One, sans-serif',
-        fontSize: '10em',
-        ['@media only screen and (orientation: portrait)']: {
-            fontSize: '12em'
-        },
-        letterSpacing: '-0.1em',
-        height: '1.07em',
-        marginRight: '0.3em'
-    }, 
-    hr: {
-        border: '0.5px solid black',
-        width: '90vw',
-        marginTop: '3vh',
-    },
-    subheadingContainer: {
-        display: 'flex',
-        width: '90vw',
-        marginBottom: '2vh',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-end'
-    },
-    about: {
-        width: '20vw',
-        fontFamily: 'Hammersmith One, sans-serif',
-        fontSize: '1em',
-        textAlign: 'justify',
-        lineHeight: '1em',
-        letterSpacing: '-0.05em'
-    },
-    linkContainer: {
-        flexGrow: 1,
-        textAlign: 'right'
-    },
-    link: {
-        textDecoration: 'none',
-        color: 'black',
-        fontFamily: 'Sorts Mill Goudy, serif',
-        fontSize: '0.9em',
-        ['@media only screen and (orientation: portrait)']: {
-            fontSize: '1.4em'
-        }
-    },
-    content: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        backgroundColor: 'none',
-        width: '90vw'
-    }
-})
-
-class HigherOrderComponent extends React.Component {
-
-    render() {
-    const { classes } = this.props
+const Artwork = (props) => {
+    const classes = artworkStyles(props)
 
     return (
         <Grid container className={classes.root}>
@@ -109,7 +39,8 @@ class HigherOrderComponent extends React.Component {
             </Grid>
             </Slide>
         </Grid>
-    )}
+    )
 }
 
-export default withStyles(styles)(HigherOrderComponent)
+
+export default Artwork
