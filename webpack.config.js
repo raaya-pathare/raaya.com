@@ -11,7 +11,17 @@ module.exports = {
     rules: [{
       test: /\.jsx?$/,
       loader: 'babel-loader',
-      exclude: /node_modules/
+      exclude: /node_modules/,
+    },
+    {
+      test: /\.(png|svg|jpg|gif|pdf)$/,
+      use: [
+      'file-loader'
+      ]
+    },
+    {
+      test:/\.css$/,
+      use:['style-loader','css-loader']
     }]
   },
   resolve: {
@@ -22,3 +32,4 @@ module.exports = {
     contentBase: './server/public'
   }
 }
+

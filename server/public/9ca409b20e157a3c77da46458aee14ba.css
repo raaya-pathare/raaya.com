@@ -1,0 +1,3 @@
+exports = module.exports = require("../../node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.id, ".cursor {\n  display: inline-block;\n  opacity: 1;\n  animation: blink 1s linear infinite;\n}\n\n/* .Typist .Cursor--blinking {\n  opacity: 1;\n  animation: blink 1s linear infinite;\n} */\n\n@keyframes blink {\n  0% {\n      opacity: 1;\n  }\n  50% {\n      opacity: 0;\n  }\n  100% {\n      opacity: 1;\n  }\n}", ""]);
