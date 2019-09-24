@@ -25,7 +25,7 @@ const About = (props) => {
                     <hr className={classes.hr} />
                 </Grid>
                 <Grid item className={classes.aboutTextContainer}>
-                    <Slide in={true} direction="right" timeout={1600}>
+                    <Slide in={true} direction="up" timeout={1600}>
                         <Typography className={classes.aboutText}>
                             "I'm passionate about well designed technology - if you are too, we'll get along.
                             Web development allows me to be my most creative while also satisfying my desire to learn.
@@ -35,7 +35,7 @@ const About = (props) => {
                     </Slide>
                 </Grid>
                 <Grid item className={classes.download}>
-                    <Slide in={true} direction="left" timeout={1300}>
+                    <Slide in={true} direction="up" timeout={1300}>
                         <Button className={classes.downloadButton}>
                             <Tooltip
                                 title="Download"
