@@ -41,19 +41,19 @@ const styles = theme => ({
         letterSpacing: '-0.1em',
     },
     subheading: {
-        fontFamily: 'Hammersmith One, sans-serif',
-        fontSize: '1em',
+        fontFamily: 'Sorts Mill Goudy, serif',
+        fontSize: '1.1em',
         textAlign: 'justify',
         letterSpacing: '-0.05em',
         width: '54%',
-        marginTop: '25px'
+        marginTop: '1.8em'
     },
     hr: {
         border: '0.5px solid black',
         height: '1px',
         width: '100%',
         marginBottom: '2.5em',
-        marginTop: '1.3em'
+        marginTop: '1.5em'
     },
     buttonContainer: {
         display: 'flex', 

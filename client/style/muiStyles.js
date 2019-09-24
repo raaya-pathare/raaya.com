@@ -1,8 +1,7 @@
 import { makeStyles } from '@material-ui/styles'
 import { createMuiTheme } from '@material-ui/core/styles'
-// import styled, { keyframes } from 'styled-components'
 
-import image from '../images/background.jpg'
+import image from '../images/background1.jpg'
 import image2 from '../images/mountain.jpg'
 import image3 from '../images/watchbetter.jpg'
 import image4 from '../images/untied.jpg'
