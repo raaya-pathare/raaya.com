@@ -16,11 +16,13 @@ const Projects = (props) => {
                 <Typography className={classes.heading}>
                     <Typing
                         hideCursor={true}
-                        speed={90}>
+                        speed={120}>
                         selected work.
                     </Typing>
                 </Typography>
                 <Typography className={classes.years}>
+                    Selected projects /
+                    <br /> 
                     2018 - 2019.
                 </Typography>
                 <hr className={classes.hr} />

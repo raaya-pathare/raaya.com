@@ -430,7 +430,7 @@ export const ProjectsStyles = makeStyles(theme => ({
     },
     WBinfo: {
         alignItems: 'center',
-        backgroundColor: '#1f1f1f',
+        backgroundColor: '#1f1f1fD9',
         ['@media only screen and (orientation: portrait)']: {
             alignSelf: 'flex-end',
             width: '65%',
@@ -512,17 +512,15 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
     },
     title: {
-        fontFamily: 'Hammersmith One, sans-serif',
-        fontWeight: '800',
+        fontFamily: 'Sorts Mill Goudy, serif',
         fontSize: '3em',
         color: 'white',
         textAlign: 'center',
-        letterSpacing: '-0.08em',
+        letterSpacing: '-0.05em',
         lineHeight: '1em'
     },
     subheading: {
-        fontFamily: 'Hammersmith One, sans-serif',
-        fontWeight: '600',
+        fontFamily: 'Sorts Mill Goudy, serif',
         color: 'white',
         textAlign: 'center',
         fontSize: '1.3em',
@@ -531,8 +529,9 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
     },
     bodytext: {
-        fontFamily: 'Sorts Mill Goudy, serif',
+        fontFamily: 'Hammersmith One, sans-serif',
         fontSize: '1em',
+        letterSpacing: '-0.01em',
         color: 'white',
         ['@media only screen and (orientation: portrait)']: {
             fontSize: '1.5em'
@@ -540,9 +539,9 @@ export const ProjectsStyles = makeStyles(theme => ({
         textAlign: 'center'
     },
     bodytext2: {
-        fontFamily: 'Hammersmith One, sans-serif',
-        fontWeight: '600',
+        fontFamily: 'Sorts Mill Goudy, serif',
         color: 'white',
+        fontWeight: '600',
         textAlign: 'center',
         ['@media only screen and (orientation: portrait)']: {
             fontSize: '1.8em'
@@ -550,7 +549,7 @@ export const ProjectsStyles = makeStyles(theme => ({
         fontSize: '1.2em',
     },
     bodytext3: {
-        fontFamily: 'Sorts Mill Goudy, serif',
+        fontFamily: 'Hammersmith One, sans-serif',
         fontSize: '1em',
         color: 'white',
         fontWeight: '1000',
@@ -577,7 +576,7 @@ export const ProjectsStyles = makeStyles(theme => ({
     },
     untiedInfo: {
         zIndex: '1',
-        backgroundColor: '#1f1f1f',
+        backgroundColor: '#1f1f1fD9',
         alignItems: 'center',
         ['@media only screen and (orientation: portrait)']: {
             width: '65%',
@@ -665,7 +664,7 @@ export const ProjectsStyles = makeStyles(theme => ({
         },
     },
     aspireInfo: {
-        backgroundColor: '#1f1f1f',
+        backgroundColor: '#1f1f1fD9',
         zIndex: '2',
         width: '55%',
         height: '40%',
