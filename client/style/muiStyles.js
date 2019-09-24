@@ -248,33 +248,35 @@ export const AboutStyles = makeStyles(theme => ({
         height: '100vh',
         width: '100%',
         backgroundSize: 'cover',
-        backgroundPosition: 'center bottom',
-        [theme.breakpoints.down('md')]: {
-            backgroundPosition: '50% 50%'
+        backgroundPosition: '50% 85%',
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            backgroundPosition: '50%, 10%'
         },
         justifyContent: 'center',
-        overflow: 'hidden',
+        overflow: 'hidden'
     },
     content: {
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-evenly',
-        height: '60vh',
-        marginTop: '5em',
-        [theme.breakpoints.down('md')]: {
-            marginTop: '15vh',
-        },
+        justifyContent: 'center',
+        width: '40vw',
         [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
-            height: '75vh'
+            width: '65vw',
+            marginTop: '9em'
+        },
+        marginTop: '6em',
+        ['@media only screen and (orientation: portrait)']: {
+            marginTop: '20vh'
         },
     },
     aboutTextContainer: {
-        alignItems: 'center',
-        alignSelf: 'center',
-        width: '35vw',
-        [theme.breakpoints.down('md')]: {
-            width: '50vw'
+        marginTop: '-20vh',
+        ['@media only screen and (orientation: portrait)']: {
+            width: '60vw'
         },
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            width: '65vw'
+        },
+        height: '20%',
         justifyContent: 'center',
     },
     aboutText: {
@@ -282,22 +284,22 @@ export const AboutStyles = makeStyles(theme => ({
             fontSize: '1.2em',
         },
         ['@media only screen and (orientation: portrait)']: {
-            fontSize: '2em'
+            fontSize: '1.8em',
+            width: '50vw'
         },
-        alignSelf: 'center',
-        fontFamily: 'Montserrat, sans-serif',
-        fontWeight: '400',
-        wordSpacing: '1px',
+        textAlign: 'justify',
+        fontFamily: 'Sorts Mill Goudy, serif',
         letterSpacing: '-0.05em',
     },
     download: {
-        [theme.breakpoints.down('md')]: {
-            marginTop: '12em',
+        marginTop: '-17vh',
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            marginTop: '-7vh'
         },
-        ['@media only screen and (orientation: landscape)']: {
-            marginTop: '3em'
+        ['@media only screen and (orientation: portrait)']: {
+            marginTop: '-12vh'
         },
-        alignSelf: 'center'
+        alignSelf: 'flex-start'
     },
     downloadButton: {
         borderRadius: '50%',
@@ -308,24 +310,39 @@ export const AboutStyles = makeStyles(theme => ({
         fontSize: '50px',
         fontWeight: '800',
     },
+    link: {
+        textDecoration: 'none', 
+        color: 'black'
+    },
+    contactLink: {
+        textDecoration: 'none', 
+        color: '#A100FF'
+    },
     aboutContainer: {
+        display: 'flex',
+        flexDirection: 'column',
         textAlign: 'center',
-        marginBottom: '20em',
-        height: '1em',
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            height: '0.1px',
+            width: '0.1px'
+        }
     },
     aboutWord: {
-        fontFamily: 'Montserrat, sans-serif',
-        fontSize: '260px',
-        [theme.breakpoints.between('md', 'lg')]: {
-            fontSize: '200px'
+        fontFamily: 'Hammersmith One, sans-serif',
+        fontSize: '10em',
+        color: 'black',
+        height: '1em',
+        [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+            height: '0px',
+            fontSize: '0px'
         },
-        fontWeight: 600,
-        color: 'white',
         letterSpacing: '-0.10em'
     },
-    link: {
-        textDecoration: 'none',
-        color: '#A100FF'
+    hr: {
+        border: '0.5px solid black',
+        height: '1px',
+        width: '100%',
+        marginTop: '1.3em',
     }
 }))
 
